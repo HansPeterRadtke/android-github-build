@@ -22,9 +22,9 @@ jobs:
           mkdir -p "$ANDROID_SDK_ROOT"
           cd "$ANDROID_SDK_ROOT"
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk-tools.zip
-          unzip sdk-tools.zip -d cmdline-tools
+          unzip sdk-tools.zip -d cmdline-tools-temp
           mkdir -p cmdline-tools/latest
-          mv cmdline-tools/* cmdline-tools/latest/ || true
+          mv cmdline-tools-temp/* cmdline-tools/latest/
           chmod -R +x cmdline-tools
           SDKMANAGER=$(find "$ANDROID_SDK_ROOT" -name sdkmanager -type f | head -n1)
           "$SDKMANAGER" --sdk_root="$ANDROID_SDK_ROOT" --list
