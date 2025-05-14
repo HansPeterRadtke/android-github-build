@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+
     steps:
       - uses: actions/checkout@v3
 
@@ -28,25 +29,30 @@ jobs:
 
       - name: Accept Licenses Forcefully
         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
       - name: Inject SDK Licenses
         run: |
           mkdir -p $HOME/.buildozer/android/platform/android-sdk/licenses
           cp .github/licenses/* $HOME/.buildozer/android/platform/android-sdk/licenses/
-      - name: Inject Licenses
           cp .github/licenses/platform-tools-license "$HOME/.buildozer/android/platform/android-sdk/licenses/platform-tools-license"
+
       - name: Patch Buildozer
         run: ./.github/scripts/patch_buildozer.sh
+
       - name: Preinstall SDK components
         run: |
           yes | sdkmanager \
             "platform-tools" \
             "build-tools;34.0.0" \
             "platforms;android-34"
+
+      - name: Inject Licenses Again
         run: ./.github/scripts/inject_licenses.sh
+
       - name: Build APK
-      env:
-        ANDROID_SDK_ROOT: "$HOME/.buildozer/android/platform/android-sdk"
-        PATH: "$HOME/.buildozer/android/platform/android-sdk/build-tools/34.0.0:$PATH"
+        env:
+          ANDROID_SDK_ROOT: "$HOME/.buildozer/android/platform/android-sdk"
+          PATH: "$HOME/.buildozer/android/platform/android-sdk/build-tools/34.0.0:$PATH"
         run: buildozer android debug
 
       - name: Upload APK
