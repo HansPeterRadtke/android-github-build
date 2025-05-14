@@ -10,6 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
+        - name: Set up Android SDK
+          run: |
+            mkdir -p "$HOME/android-sdk"
+            cd "$HOME/android-sdk"
+            wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk-tools.zip
+            unzip sdk-tools.zip -d cmdline-tools
+            mv cmdline-tools cmdline-tools-tools
+            mkdir cmdline-tools
+            mv cmdline-tools-tools cmdline-tools/latest
+            yes | ./cmdline-tools/latest/bin/sdkmanager --sdk_root="$HOME/android-sdk" "platform-tools" "build-tools;34.0.0"
+            yes | ./cmdline-tools/latest/bin/sdkmanager --licenses
+            echo "export PATH=$HOME/android-sdk/platform-tools:$PATH" >> "$GITHUB_ENV"
+
         run: |
           sudo apt update
           sudo apt install -y python3-pip unzip zip openjdk-17-jdk
