@@ -1,5 +1,10 @@
 #!/bin/bash
 
 # Monkey-patch buildozer to skip sdkmanager license prompts
-sed -i "/sdkmanager/s/^/echo SKIP; exit 0 # /" \"$HOME/.local/lib/python3.10/site-packages/buildozer/targets/android.py\"
+TARGET_FILE=$(find $HOME -type f -path "*/buildozer/targets/android.py" 2>/dev/null | head -n 1)
 
+if [ -f "$TARGET_FILE" ]; then
+  sed -i "/sdkmanager/s/^/echo SKIP; exit 0 # /" "$TARGET_FILE"
+else
+  echo "android.py not found. Patch skipped."
+fi
