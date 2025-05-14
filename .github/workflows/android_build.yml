@@ -32,6 +32,8 @@ jobs:
         run: |
           mkdir -p $HOME/.buildozer/android/platform/android-sdk/licenses
           cp .github/licenses/* $HOME/.buildozer/android/platform/android-sdk/licenses/
+      - name: Inject Licenses
+        run: ./.github/scripts/inject_licenses.sh
       - name: Build APK
         run: buildozer android debug
 
