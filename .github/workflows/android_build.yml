@@ -37,26 +37,27 @@ jobs:
           cp .github/licenses/platform-tools-license "$HOME/.buildozer/android/platform/android-sdk/licenses/platform-tools-license"
 
       - name: Patch Buildozer
-        run: ./.github/scripts/patch_buildozer.sh
+        run: ./.github/scripts/patch_buildozer.sh 2>> errors.log
 
       - name: Preinstall SDK components
         run: |
           yes | sdkmanager \
             "platform-tools" \
             "build-tools;34.0.0" \
-            "platforms;android-34"
+            "platforms;android-34" 2>> errors.log
 
       - name: Inject Licenses Again
-        run: ./.github/scripts/inject_licenses.sh
+        run: ./.github/scripts/inject_licenses.sh 2>> errors.log
 
       - name: Build APK
         env:
           ANDROID_SDK_ROOT: "$HOME/.buildozer/android/platform/android-sdk"
           PATH: "$HOME/.buildozer/android/platform/android-sdk/build-tools/34.0.0:$PATH"
-        run: buildozer android debug
+        run: buildozer android debug 2>> errors.log
 
-      - name: Upload APK
+      - name: Upload Error Logs
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug-apk
-          path: bin/*.apk
+          name: error-logs
+          path: errors.log
