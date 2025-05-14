@@ -1,35 +1,35 @@
+---
 name: Android Build
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Android SDK
+
       - name: Set up Java 17
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
+
+      - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-      - name: Set JAVA_HOME to Java 17
-        run: |
-          echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
-          echo "/usr/lib/jvm/java-17-openjdk-amd64/bin" >> $GITHUB_PATH
+        with:
           packages: |
             platform-tools
             build-tools;34.0.0
             platforms;android-34
 
-      - name: Install dependencies
+      - name: Install Python packages
         run: |
-          sudo apt update
-          sudo apt install -y python3-pip unzip zip openjdk-17-jdk wget
-
+          pip install cython
+          pip install buildozer
 
       - name: Build APK
         run: buildozer android debug
