@@ -24,8 +24,8 @@ jobs:
           mv cmdline-tools cmdline-tools-tools
           mkdir cmdline-tools
           mv cmdline-tools-tools cmdline-tools/latest
-          yes | ./cmdline-tools/latest/bin/sdkmanager --sdk_root="$HOME/android-sdk" "platform-tools" "build-tools;34.0.0"
-          yes | ./cmdline-tools/latest/bin/sdkmanager --licenses
+          yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root="$HOME/android-sdk" "platform-tools" "build-tools;34.0.0"
+          yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
           echo "export PATH=$HOME/android-sdk/platform-tools:$PATH" >> "$GITHUB_ENV"
 
       - name: Install Python packages
