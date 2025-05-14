@@ -19,17 +19,17 @@ jobs:
         env:
           ANDROID_SDK_ROOT: ${{ runner.temp }}/android-sdk
         run: |
-          mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools"
+          mkdir -p "$ANDROID_SDK_ROOT"
           cd "$ANDROID_SDK_ROOT"
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk-tools.zip
           unzip sdk-tools.zip -d cmdline-tools
           mv cmdline-tools cmdline-tools-tmp
           mkdir -p cmdline-tools/latest
           mv cmdline-tools-tmp/* cmdline-tools/latest/
-          find "$ANDROID_SDK_ROOT" -name sdkmanager -type f -exec chmod +x {} \;
-          find "$ANDROID_SDK_ROOT" -name sdkmanager -type f -exec {} --sdk_root="$ANDROID_SDK_ROOT" --list \;
-          find "$ANDROID_SDK_ROOT" -name sdkmanager -type f -exec {} --sdk_root="$ANDROID_SDK_ROOT" "platform-tools" "build-tools;34.0.0" \;
-          find "$ANDROID_SDK_ROOT" -name sdkmanager -type f -exec yes | {} --licenses \;
+          chmod +x cmdline-tools/latest/bin/sdkmanager
+          cmdline-tools/latest/bin/sdkmanager --sdk_root="$ANDROID_SDK_ROOT" --list
+          cmdline-tools/latest/bin/sdkmanager --sdk_root="$ANDROID_SDK_ROOT" "platform-tools" "build-tools;34.0.0"
+          bash -c "yes | cmdline-tools/latest/bin/sdkmanager --licenses"
           echo "$ANDROID_SDK_ROOT/platform-tools" >> $GITHUB_PATH
 
       - name: Install Python packages
