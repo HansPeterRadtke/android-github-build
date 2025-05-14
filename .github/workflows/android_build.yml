@@ -41,6 +41,9 @@ jobs:
             "platforms;android-34"
         run: ./.github/scripts/inject_licenses.sh
       - name: Build APK
+      env:
+        ANDROID_SDK_ROOT: "$HOME/.buildozer/android/platform/android-sdk"
+        PATH: "$HOME/.buildozer/android/platform/android-sdk/build-tools/34.0.0:$PATH"
         run: buildozer android debug
 
       - name: Upload APK
