@@ -33,6 +33,8 @@ jobs:
           mkdir -p $HOME/.buildozer/android/platform/android-sdk/licenses
           cp .github/licenses/* $HOME/.buildozer/android/platform/android-sdk/licenses/
       - name: Inject Licenses
+      - name: Patch Buildozer
+        run: ./.github/scripts/patch_buildozer.sh
       - name: Preinstall SDK components
         run: |
           yes | sdkmanager \
