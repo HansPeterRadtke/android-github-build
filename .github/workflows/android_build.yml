@@ -26,6 +26,7 @@ jobs:
         run: |
           pip install cython
           pip install buildozer
+          echo "export PATH=\"$HOME/.local/bin:$PATH\"" >> $GITHUB_ENV
 
       - name: Accept Licenses Forcefully
         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
@@ -52,7 +53,7 @@ jobs:
       - name: Build APK
         env:
           ANDROID_SDK_ROOT: "$HOME/.buildozer/android/platform/android-sdk"
-          PATH: "$HOME/.buildozer/android/platform/android-sdk/build-tools/34.0.0:$PATH"
+          PATH: "$HOME/.buildozer/android/platform/android-sdk/build-tools/34.0.0:$PATH:$HOME/.local/bin"
         run: buildozer android debug 2>> errors.log
 
       - name: Upload Error Logs
