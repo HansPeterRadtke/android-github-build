@@ -11,6 +11,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+      - name: Set JAVA_HOME to Java 17
+        run: |
+          echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
+          echo "/usr/lib/jvm/java-17-openjdk-amd64/bin" >> $GITHUB_PATH
         with:
           packages: |
             platform-tools
