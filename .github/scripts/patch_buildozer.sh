@@ -5,7 +5,9 @@ TARGET_FILE=$(find / -type f -path "*/buildozer/targets/android.py" 2>/dev/null 
 
 if [ -f "$TARGET_FILE" ]; then
   echo "Patching $TARGET_FILE"
+  echo "Before patch:" && grep sdkmanager "$TARGET_FILE"
   sed -i '/sdkmanager/ s/^.*sdkmanager.*/        # sdkmanager line patched out/' "$TARGET_FILE"
+  echo "After patch:" && grep sdkmanager "$TARGET_FILE"
 else
   echo "android.py not found. Patch skipped."
   exit 1
