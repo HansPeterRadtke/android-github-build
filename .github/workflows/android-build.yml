@@ -25,6 +25,11 @@ jobs:
           pip install --upgrade pip
           pip install buildozer cython
 
+      - name: Accept all Android SDK licenses
+        run: yes | sdkmanager --licenses
+        env:
+          ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+
       - name: Build APK
         run: |
           cd android_01
