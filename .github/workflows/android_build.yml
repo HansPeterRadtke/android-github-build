@@ -38,17 +38,6 @@ jobs:
           cp .github/licenses/* $HOME/.buildozer/android/platform/android-sdk/licenses/
           cp .github/licenses/platform-tools-license "$HOME/.buildozer/android/platform/android-sdk/licenses/platform-tools-license"
 
-      - name: Patch Buildozer
-        run: ./.github/scripts/patch_buildozer.sh 2>> errors.log
-
-      - name: Show Patched android.py
-        run: |
-          TARGET_FILE=$(find / -type f -path "*/buildozer/targets/android.py" 2>/dev/null | head -n 1)
-          echo "\n\n======= PATCHED ANDROID.PY ======="
-          cat "$TARGET_FILE"
-          echo "======= END PATCHED ANDROID.PY =======\n\n"
-        continue-on-error: true
-
       - name: Preinstall SDK components
         run: |
           yes | sdkmanager \
