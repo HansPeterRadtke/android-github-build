@@ -30,7 +30,7 @@ jobs:
           pip install buildozer
 
       - name: Accept Licenses Forcefully
-yes |         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+yes | yes |         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
       - name: Inject SDK Licenses
         run: |
@@ -40,7 +40,7 @@ yes |         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --lic
 
       - name: Preinstall SDK components
         run: |
-yes |           yes | sdkmanager \
+yes | yes |           yes | sdkmanager \
             "platform-tools" \
             "build-tools;34.0.0" \
             "platforms;android-34" 2>> errors.log
