@@ -1,2 +1,2 @@
-rootProject.name = "KivyClone"
+rootProject.name = "android_01"
 include ':app'
