@@ -3,7 +3,6 @@ package com.example.app;
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    LinearLayout layout = new LinearLayout(this);
-    layout.setOrientation(LinearLayout.VERTICAL);
+    LinearLayout layout = findViewById(R.id.audioButtonLayout);
 
     AssetManager assetManager = getAssets();
     try {
@@ -37,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
     } catch (IOException e) {
       e.printStackTrace();
     }
-
-    LinearLayout rootLayout = findViewById(android.R.id.content);
-    rootLayout.addView(layout);
 
     Button exitBtn = findViewById(R.id.exitButton);
     if (exitBtn != null) {
