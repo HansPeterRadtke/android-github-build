@@ -3,23 +3,27 @@ package com.example.app;
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
   private MediaPlayer mediaPlayer;
+  private ImageView backgroundImage;
+  private boolean isBackgroundVisible = false;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    backgroundImage = findViewById(R.id.backgroundImage);
     LinearLayout layout = findViewById(R.id.audioButtonLayout);
-
     AssetManager assetManager = getAssets();
+
     try {
       String[] files = assetManager.list("");
       if (files != null) {
@@ -36,10 +40,16 @@ public class MainActivity extends AppCompatActivity {
       e.printStackTrace();
     }
 
+    Button toggleBtn = findViewById(R.id.toggleButton);
+    toggleBtn.setOnClickListener(v -> toggleBackground());
+
     Button exitBtn = findViewById(R.id.exitButton);
-    if (exitBtn != null) {
-      exitBtn.setOnClickListener(v -> finishAffinity());
-    }
+    exitBtn.setOnClickListener(v -> finishAffinity());
+  }
+
+  private void toggleBackground() {
+    isBackgroundVisible = !isBackgroundVisible;
+    backgroundImage.setVisibility(isBackgroundVisible ? View.VISIBLE : View.GONE);
   }
 
   private void playAudio(String filename) {

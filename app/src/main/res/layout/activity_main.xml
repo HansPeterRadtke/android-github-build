@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@drawable/background">
+  android:layout_height="match_parent">
+
+  <ImageView
+    android:id="@+id/backgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@drawable/background"
+    android:visibility="gone" />
 
   <LinearLayout
     android:id="@+id/audioButtonLayout"
@@ -21,17 +28,10 @@
     android:gravity="center">
 
     <Button
-      android:id="@+id/playButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/play_sound" />
-
-    <Button
       android:id="@+id/toggleButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="@string/toggle_background"
-      android:layout_marginStart="16dp" />
+      android:text="@string/toggle_background" />
 
     <Button
       android:id="@+id/exitButton"
