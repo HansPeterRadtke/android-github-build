@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">KivyClone</string>
+  <string name="app_name">android_01</string>
   <string name="play_sound">Play Sound</string>
   <string name="toggle_background">Toggle Background</string>
   <string name="exit_app">Exit App</string>
