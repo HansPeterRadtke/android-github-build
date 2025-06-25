@@ -3,6 +3,8 @@ on:
   push:
     tags:
       - 'v*'
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,9 +20,7 @@ jobs:
         chmod +x ./gradlew
     - name: Build APK
       run: ./gradlew assembleDebug
-    - name: Upload to GitHub Release
+    - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
       with:
         files: app/build/outputs/apk/debug/app-debug.apk
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
