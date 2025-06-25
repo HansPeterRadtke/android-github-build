@@ -12,15 +12,14 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
   private MediaPlayer mediaPlayer;
-  private boolean useAltBackground = false;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
     LinearLayout layout = new LinearLayout(this);
     layout.setOrientation(LinearLayout.VERTICAL);
-    setContentView(layout);
 
     AssetManager assetManager = getAssets();
     try {
@@ -39,18 +38,13 @@ public class MainActivity extends AppCompatActivity {
       e.printStackTrace();
     }
 
-    Button toggleBgBtn = new Button(this);
-    toggleBgBtn.setText("Toggle Background");
-    toggleBgBtn.setOnClickListener(v -> {
-      layout.setBackgroundColor(useAltBackground ? 0xFFFFFFFF : 0xFFDDDDDD);
-      useAltBackground = !useAltBackground;
-    });
-    layout.addView(toggleBgBtn);
+    LinearLayout rootLayout = findViewById(android.R.id.content);
+    rootLayout.addView(layout);
 
-    Button exitBtn = new Button(this);
-    exitBtn.setText("Exit");
-    exitBtn.setOnClickListener(v -> finishAffinity());
-    layout.addView(exitBtn);
+    Button exitBtn = findViewById(R.id.exitButton);
+    if (exitBtn != null) {
+      exitBtn.setOnClickListener(v -> finishAffinity());
+    }
   }
 
   private void playAudio(String filename) {
