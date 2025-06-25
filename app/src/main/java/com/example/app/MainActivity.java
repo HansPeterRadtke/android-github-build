@@ -1,64 +1,73 @@
 package com.example.app;
 
+import android.content.res.AssetManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-
+import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.IOException;
 
-  private ImageView background;
+public class MainActivity extends AppCompatActivity {
   private MediaPlayer mediaPlayer;
+  private boolean useAltBackground = false;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
 
-    background = findViewById(R.id.backgroundImage);
-    Button playButton = findViewById(R.id.playButton);
-    Button toggleButton = findViewById(R.id.toggleButton);
-    Button exitButton = findViewById(R.id.exitButton);
+    LinearLayout layout = new LinearLayout(this);
+    layout.setOrientation(LinearLayout.VERTICAL);
+    setContentView(layout);
 
-    mediaPlayer = MediaPlayer.create(this, R.raw.sound);
-
-    playButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mediaPlayer != null) {
-          mediaPlayer.start();
+    AssetManager assetManager = getAssets();
+    try {
+      String[] files = assetManager.list("");
+      if (files != null) {
+        for (String file : files) {
+          if (file.endsWith(".mp3")) {
+            Button btn = new Button(this);
+            btn.setText(file);
+            btn.setOnClickListener(v -> playAudio(file));
+            layout.addView(btn);
+          }
         }
       }
-    });
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
 
-    toggleButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (background.getVisibility() == View.VISIBLE) {
-          background.setVisibility(View.INVISIBLE);
-        } else {
-          background.setVisibility(View.VISIBLE);
-        }
-      }
+    Button toggleBgBtn = new Button(this);
+    toggleBgBtn.setText("Toggle Background");
+    toggleBgBtn.setOnClickListener(v -> {
+      layout.setBackgroundColor(useAltBackground ? 0xFFFFFFFF : 0xFFDDDDDD);
+      useAltBackground = !useAltBackground;
     });
+    layout.addView(toggleBgBtn);
 
-    exitButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        finish();
-      }
-    });
+    Button exitBtn = new Button(this);
+    exitBtn.setText("Exit");
+    exitBtn.setOnClickListener(v -> finishAffinity());
+    layout.addView(exitBtn);
   }
 
-  @Override
-  protected void onDestroy() {
-    if (mediaPlayer != null) {
-      mediaPlayer.release();
-      mediaPlayer = null;
+  private void playAudio(String filename) {
+    try {
+      if (mediaPlayer != null) {
+        mediaPlayer.stop();
+        mediaPlayer.release();
+      }
+      AssetManager assetManager = getAssets();
+      mediaPlayer = new MediaPlayer();
+      mediaPlayer.setDataSource(assetManager.openFd(filename).getFileDescriptor(),
+        assetManager.openFd(filename).getStartOffset(),
+        assetManager.openFd(filename).getLength());
+      mediaPlayer.prepare();
+      mediaPlayer.start();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-    super.onDestroy();
   }
 }
