@@ -1,12 +1,12 @@
-﻿2025-06-26T13:09:12.9046129Z Post job cleanup.
-2025-06-26T13:09:13.0207739Z [command]/usr/bin/git version
-2025-06-26T13:09:13.0243976Z git version 2.49.0
-2025-06-26T13:09:13.0289394Z Temporarily overriding HOME='/home/runner/work/_temp/236940b6-0e8a-4660-96de-2a019bdf96f5' before making global git config changes
-2025-06-26T13:09:13.0290693Z Adding repository directory to the temporary git global config as a safe directory
-2025-06-26T13:09:13.0303547Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
-2025-06-26T13:09:13.0338136Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-06-26T13:09:13.0370981Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-06-26T13:09:13.0610533Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-06-26T13:09:13.0635108Z http.https://github.com/.extraheader
-2025-06-26T13:09:13.0648119Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-06-26T13:09:13.0680241Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+﻿2025-06-26T13:56:47.9259925Z Post job cleanup.
+2025-06-26T13:56:48.0187066Z [command]/usr/bin/git version
+2025-06-26T13:56:48.0222071Z git version 2.49.0
+2025-06-26T13:56:48.0263523Z Temporarily overriding HOME='/home/runner/work/_temp/72367bbc-0249-4c79-8564-6ebca5f2ca89' before making global git config changes
+2025-06-26T13:56:48.0264476Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-26T13:56:48.0269165Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
+2025-06-26T13:56:48.0302670Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-26T13:56:48.0333749Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-26T13:56:48.0552848Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-26T13:56:48.0572358Z http.https://github.com/.extraheader
+2025-06-26T13:56:48.0584058Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-26T13:56:48.0613358Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
