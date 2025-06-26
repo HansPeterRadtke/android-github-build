@@ -35,7 +35,9 @@ repositories {
 }
 
 dependencies {
-    implementation "com.bihe0832.android:lib-sherpa-onnx:6.25.21"
+    implementation("com.bihe0832.android:lib-sherpa-onnx:6.25.21") {
+        exclude group: 'com.microsoft.onnxruntime', module: 'onnxruntime'
+    }
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.15.1'
 }
