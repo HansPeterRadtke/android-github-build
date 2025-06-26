@@ -1,79 +1,87 @@
-﻿2025-06-26T12:06:55.2095266Z ##[group]Run ./gradlew assembleDebug
-2025-06-26T12:06:55.2095613Z [36;1m./gradlew assembleDebug[0m
-2025-06-26T12:06:55.2146591Z shell: /usr/bin/bash -e {0}
-2025-06-26T12:06:55.2146866Z env:
-2025-06-26T12:06:55.2147176Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T12:06:55.2147730Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T12:06:55.2148138Z ##[endgroup]
-2025-06-26T12:06:55.2950791Z Downloading https://services.gradle.org/distributions/gradle-8.14.1-bin.zip
-2025-06-26T12:06:56.7229548Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
-2025-06-26T12:06:59.3914258Z > Task :app:preBuild UP-TO-DATE
-2025-06-26T12:06:59.3933371Z > Task :app:preDebugBuild UP-TO-DATE
-2025-06-26T12:06:59.3944783Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
-2025-06-26T12:06:59.3945493Z > Task :app:checkKotlinGradlePluginConfigurationErrors
-2025-06-26T12:07:05.9876316Z > Task :app:generateDebugResValues
-2025-06-26T12:07:05.9876886Z > Task :app:checkDebugAarMetadata
-2025-06-26T12:07:05.9877417Z > Task :app:mapDebugSourceSetPaths
-2025-06-26T12:07:05.9877830Z > Task :app:generateDebugResources
-2025-06-26T12:07:06.6872740Z > Task :app:packageDebugResources
-2025-06-26T12:07:07.1866298Z > Task :app:mergeDebugResources
-2025-06-26T12:07:08.5935782Z > Task :app:createDebugCompatibleScreenManifests
-2025-06-26T12:07:08.5946290Z > Task :app:extractDeepLinksDebug
-2025-06-26T12:07:08.6867369Z > Task :app:parseDebugLocalResources
-2025-06-26T12:07:08.7881215Z 
-2025-06-26T12:07:08.7941444Z > Task :app:processDebugMainManifest
-2025-06-26T12:07:08.7953635Z package="com.example.app" found in source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
-2025-06-26T12:07:08.7955778Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-2025-06-26T12:07:08.7957706Z Recommendation: remove package="com.example.app" from the source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
-2025-06-26T12:07:08.8877437Z 
-2025-06-26T12:07:08.8881859Z > Task :app:processDebugManifest
-2025-06-26T12:07:08.9885924Z > Task :app:javaPreCompileDebug
-2025-06-26T12:07:08.9896798Z > Task :app:mergeDebugShaders
-2025-06-26T12:07:08.9936155Z > Task :app:compileDebugShaders NO-SOURCE
-2025-06-26T12:07:08.9940030Z > Task :app:generateDebugAssets UP-TO-DATE
-2025-06-26T12:07:09.0875799Z > Task :app:mergeDebugAssets
-2025-06-26T12:07:09.7866828Z > Task :app:compressDebugAssets
-2025-06-26T12:07:10.1867871Z > Task :app:desugarDebugFileDependencies
-2025-06-26T12:07:10.1871708Z > Task :app:mergeDebugStartupProfile
-2025-06-26T12:07:10.1875430Z > Task :app:checkDebugDuplicateClasses
-2025-06-26T12:07:10.1876079Z > Task :app:mergeDebugJniLibFolders
-2025-06-26T12:07:27.8888144Z > Task :app:mergeLibDexDebug
-2025-06-26T12:07:28.2886893Z > Task :app:mergeDebugNativeLibs
-2025-06-26T12:07:29.8865957Z > Task :app:validateSigningDebug
-2025-06-26T12:07:29.8866738Z > Task :app:processDebugManifestForPackage
-2025-06-26T12:07:30.2866611Z > Task :app:mergeExtDexDebug
-2025-06-26T12:07:30.8881007Z > Task :app:writeDebugAppMetadata
-2025-06-26T12:07:30.8885845Z > Task :app:writeDebugSigningConfigVersions
-2025-06-26T12:07:31.1865177Z 
-2025-06-26T12:07:31.1870550Z > Task :app:stripDebugDebugSymbols
-2025-06-26T12:07:31.1880108Z Unable to strip the following libraries, packaging them as they are: libonnxruntime.so, libsherpa-onnx-jni.so.
-2025-06-26T12:07:31.2872600Z 
-2025-06-26T12:07:31.2876938Z > Task :app:processDebugResources
-2025-06-26T12:07:34.5876374Z 
-2025-06-26T12:07:34.5876928Z > Task :app:compileDebugKotlin FAILED
-2025-06-26T12:07:34.5885109Z FAILURE: Build failed with an exception.
-2025-06-26T12:07:34.5885478Z 
-2025-06-26T12:07:34.5887090Z 
-2025-06-26T12:07:34.5888031Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
-2025-06-26T12:07:34.5914537Z * What went wrong:
-2025-06-26T12:07:34.5924093Z Execution failed for task ':app:compileDebugKotlin'.
-2025-06-26T12:07:34.5924533Z 
-2025-06-26T12:07:34.5925647Z > Inconsistent JVM-target compatibility detected for tasks 'compileDebugJavaWithJavac' (1.8) and 'compileDebugKotlin' (17).
-2025-06-26T12:07:34.5926814Z   
-2025-06-26T12:07:34.5927499Z   Consider using JVM Toolchain: https://kotl.in/gradle/jvm/toolchain
-2025-06-26T12:07:34.5929049Z   Learn more about JVM-target validation: https://kotl.in/gradle/jvm/target-validation 
-2025-06-26T12:07:34.5929687Z 
-2025-06-26T12:07:34.5929823Z * Try:
-2025-06-26T12:07:34.5930216Z > Run with --stacktrace option to get the stack trace.
-2025-06-26T12:07:34.5930859Z > Run with --info or --debug option to get more log output.
-2025-06-26T12:07:34.5931415Z > Run with --scan to get full insights.
-2025-06-26T12:07:34.5931916Z > Get more help at https://help.gradle.org.
-2025-06-26T12:07:34.5934421Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-2025-06-26T12:07:34.5934998Z 
-2025-06-26T12:07:34.5936953Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-2025-06-26T12:07:34.5939032Z 
-2025-06-26T12:07:34.5948808Z 
-2025-06-26T12:07:34.5949030Z BUILD FAILED in 39s
-2025-06-26T12:07:34.5950065Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-2025-06-26T12:07:34.5951125Z 30 actionable tasks: 30 executed
-2025-06-26T12:07:34.7269266Z ##[error]Process completed with exit code 1.
+﻿2025-06-26T13:08:30.8687979Z ##[group]Run ./gradlew assembleDebug
+2025-06-26T13:08:30.8688776Z [36;1m./gradlew assembleDebug[0m
+2025-06-26T13:08:30.8746652Z shell: /usr/bin/bash -e {0}
+2025-06-26T13:08:30.8746901Z env:
+2025-06-26T13:08:30.8747183Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T13:08:30.8747689Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T13:08:30.8748027Z ##[endgroup]
+2025-06-26T13:08:30.9576267Z Downloading https://services.gradle.org/distributions/gradle-8.14.2-bin.zip
+2025-06-26T13:08:32.5074645Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2025-06-26T13:08:34.9806579Z > Task :app:preBuild UP-TO-DATE
+2025-06-26T13:08:34.9814498Z > Task :app:preDebugBuild UP-TO-DATE
+2025-06-26T13:08:34.9817326Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+2025-06-26T13:08:34.9819580Z > Task :app:checkKotlinGradlePluginConfigurationErrors
+2025-06-26T13:08:40.2804484Z > Task :app:generateDebugResValues
+2025-06-26T13:08:40.2809582Z > Task :app:checkDebugAarMetadata
+2025-06-26T13:08:40.8847006Z > Task :app:mapDebugSourceSetPaths
+2025-06-26T13:08:40.8847538Z > Task :app:generateDebugResources
+2025-06-26T13:08:40.8847978Z > Task :app:packageDebugResources
+2025-06-26T13:08:41.5809109Z > Task :app:createDebugCompatibleScreenManifests
+2025-06-26T13:08:41.5853306Z > Task :app:extractDeepLinksDebug
+2025-06-26T13:08:41.5860098Z > Task :app:mergeDebugResources
+2025-06-26T13:08:41.6789345Z > Task :app:parseDebugLocalResources
+2025-06-26T13:08:41.7809014Z 
+2025-06-26T13:08:41.7809629Z > Task :app:processDebugMainManifest
+2025-06-26T13:08:41.7839276Z package="com.example.app" found in source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
+2025-06-26T13:08:41.7841056Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+2025-06-26T13:08:41.7843179Z Recommendation: remove package="com.example.app" from the source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
+2025-06-26T13:08:41.8789958Z 
+2025-06-26T13:08:41.8794068Z > Task :app:processDebugManifest
+2025-06-26T13:08:41.9790575Z > Task :app:processDebugManifestForPackage
+2025-06-26T13:08:41.9791821Z > Task :app:javaPreCompileDebug
+2025-06-26T13:08:42.8792207Z > Task :app:mergeDebugShaders
+2025-06-26T13:08:42.8795231Z > Task :app:compileDebugShaders NO-SOURCE
+2025-06-26T13:08:42.8808931Z > Task :app:generateDebugAssets UP-TO-DATE
+2025-06-26T13:08:42.9788937Z > Task :app:mergeDebugAssets
+2025-06-26T13:08:43.0824580Z > Task :app:compressDebugAssets
+2025-06-26T13:08:43.7789062Z > Task :app:processDebugResources
+2025-06-26T13:08:44.1803681Z > Task :app:checkDebugDuplicateClasses
+2025-06-26T13:08:47.5801982Z > Task :app:desugarDebugFileDependencies
+2025-06-26T13:08:47.5803197Z > Task :app:mergeDebugStartupProfile
+2025-06-26T13:08:58.2788805Z 
+2025-06-26T13:08:58.2790416Z > Task :app:compileDebugKotlin
+2025-06-26T13:08:58.2840503Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:3:8 Unresolved reference: PreferenceHelper
+2025-06-26T13:08:58.2869948Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:7:17 Unresolved reference: compose
+2025-06-26T13:08:58.2871905Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:8:17 Unresolved reference: compose
+2025-06-26T13:08:58.2873770Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:9:17 Unresolved reference: compose
+2025-06-26T13:08:58.2876352Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:30:21 Unresolved reference: MutableState
+2025-06-26T13:08:58.2879255Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:30:43 Unresolved reference: mutableFloatStateOf
+2025-06-26T13:08:58.2881438Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:31:25 Unresolved reference: MutableState
+2025-06-26T13:08:58.2883665Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:31:45 Unresolved reference: mutableIntStateOf
+2025-06-26T13:08:58.2885723Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:36:24 Variable expected
+2025-06-26T13:08:58.2887643Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:42:28 Variable expected
+2025-06-26T13:08:58.2889770Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:178:15 Unresolved reference: TAG
+2025-06-26T13:08:58.2891832Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:213:17 Unresolved reference: PreferenceHelper
+2025-06-26T13:08:58.2894025Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:214:21 Unresolved reference: PreferenceHelper
+2025-06-26T13:08:58.2896200Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:221:15 Unresolved reference: TAG
+2025-06-26T13:08:58.2898265Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:225:15 Unresolved reference: TAG
+2025-06-26T13:08:58.2900561Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:245:19 Unresolved reference: TAG
+2025-06-26T13:08:58.2902357Z e: file:///home/runner/work/android-github-build/android-github-build/app/src/main/java/com/k2fsa/sherpa/onnx/tts/engine/TtsEngine.kt:265:19 Unresolved reference: TAG
+2025-06-26T13:09:04.3789479Z 
+2025-06-26T13:09:04.3789981Z > Task :app:compileDebugKotlin FAILED
+2025-06-26T13:09:12.5788870Z > Task :app:mergeExtDexDebug
+2025-06-26T13:09:12.5789779Z 
+2025-06-26T13:09:12.5791945Z FAILURE: Build failed with an exception.
+2025-06-26T13:09:12.5792623Z 
+2025-06-26T13:09:12.5796403Z 
+2025-06-26T13:09:12.5801044Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
+2025-06-26T13:09:12.5806501Z * What went wrong:
+2025-06-26T13:09:12.5809198Z Execution failed for task ':app:compileDebugKotlin'.
+2025-06-26T13:09:12.5814587Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2025-06-26T13:09:12.5816514Z    > Compilation error. See log for more details
+2025-06-26T13:09:12.5816862Z 
+2025-06-26T13:09:12.5827752Z 
+2025-06-26T13:09:12.5827904Z * Try:
+2025-06-26T13:09:12.5828659Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2025-06-26T13:09:12.5829443Z > Run with --stacktrace option to get the stack trace.
+2025-06-26T13:09:12.5830008Z > Run with --info or --debug option to get more log output.
+2025-06-26T13:09:12.5830521Z > Run with --scan to get full insights.
+2025-06-26T13:09:12.5830984Z > Get more help at https://help.gradle.org.
+2025-06-26T13:09:12.5831838Z 
+2025-06-26T13:09:12.5831973Z BUILD FAILED in 41s
+2025-06-26T13:09:12.5842191Z 
+2025-06-26T13:09:12.5842929Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2025-06-26T13:09:12.5844105Z 
+2025-06-26T13:09:12.5844925Z For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2025-06-26T13:09:12.5846163Z 23 actionable tasks: 23 executed
+2025-06-26T13:09:12.7100266Z ##[error]Process completed with exit code 1.
