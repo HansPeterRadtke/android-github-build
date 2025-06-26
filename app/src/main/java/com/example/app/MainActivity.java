@@ -21,6 +21,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.bihe0832.android.lib.sherpa.OnnxAsr;
+import com.bihe0832.android.lib.sherpa.OnnxTts;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,12 +33,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.nio.file.Paths;
-import java.util.concurrent.atomic.AtomicBoolean;
 
-import io.github.givimad.piperjni.Piper;
-import io.github.givimad.piperjni.PiperJNI;
-import io.github.givimad.whisperjni.WhisperJNI;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MainActivity extends AppCompatActivity {
   private ImageView backgroundImage;
@@ -48,9 +47,8 @@ public class MainActivity extends AppCompatActivity {
   private ByteArrayOutputStream recordedStream;
   private EditText textOutput;
 
-  private Object whisperCtx;
-  private Object piperCfg;
-  private Object piperVoice;
+  private OnnxAsr asr;
+  private OnnxTts tts;
 
   private static final String[] MODEL_URLS = {
     "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx",
@@ -93,27 +91,20 @@ public class MainActivity extends AppCompatActivity {
 
     toTextBtn.setOnClickListener(v -> {
       if (recordedStream == null) return;
-      WhisperJNI.loadLibrary();
-      if (whisperCtx == null) {
-        whisperCtx = new WhisperJNI().init(Paths.get(getFilesDir().getAbsolutePath(), "ggml-tiny.bin"));
+      if (asr == null) {
+        asr = new OnnxAsr(getFilesDir() + "/ggml-tiny.bin");
       }
-      byte[] audioBytes = recordedStream.toByteArray();
-      float[] audioFloat = bytesToFloatArray(audioBytes);
-      String text = new WhisperJNI().full(whisperCtx, audioFloat);
+      float[] audioFloat = bytesToFloatArray(recordedStream.toByteArray());
+      String text = asr.transcribe(audioFloat);
       textOutput.setText(text);
     });
 
     readTextBtn.setOnClickListener(v -> {
-      PiperJNI.loadLibrary();
-      if (piperCfg == null) {
-        piperCfg = Piper.createConfig();
-        piperVoice = Piper.loadVoice(
-          piperCfg,
-          Paths.get(getFilesDir().getAbsolutePath(), "en_US-lessac-medium.onnx"),
-          Paths.get(getFilesDir().getAbsolutePath(), "en_US-lessac-medium.json"), 0);
+      if (tts == null) {
+        tts = new OnnxTts(getFilesDir() + "/en_US-lessac-medium.onnx", getFilesDir() + "/en_US-lessac-medium.json");
       }
       String text = textOutput.getText().toString();
-      short[] pcm = Piper.textToAudio(piperCfg, piperVoice, text);
+      short[] pcm = tts.synthesize(text);
       playPCM(pcm);
     });
   }
