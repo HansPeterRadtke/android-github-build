@@ -1,0 +1,67 @@
+﻿2025-06-25T17:21:31.2012673Z ##[group]Run actions/checkout@v4
+2025-06-25T17:21:31.2013697Z with:
+2025-06-25T17:21:31.2014377Z   repository: HansPeterRadtke/android-github-build
+2025-06-25T17:21:31.2015158Z   token: ***
+2025-06-25T17:21:31.2015575Z   ssh-strict: true
+2025-06-25T17:21:31.2015987Z   ssh-user: git
+2025-06-25T17:21:31.2016423Z   persist-credentials: true
+2025-06-25T17:21:31.2016918Z   clean: true
+2025-06-25T17:21:31.2017348Z   sparse-checkout-cone-mode: true
+2025-06-25T17:21:31.2017864Z   fetch-depth: 1
+2025-06-25T17:21:31.2018277Z   fetch-tags: false
+2025-06-25T17:21:31.2018720Z   show-progress: true
+2025-06-25T17:21:31.2019155Z   lfs: false
+2025-06-25T17:21:31.2019563Z   submodules: false
+2025-06-25T17:21:31.2020002Z   set-safe-directory: true
+2025-06-25T17:21:31.2020738Z ##[endgroup]
+2025-06-25T17:21:31.3074298Z Syncing repository: HansPeterRadtke/android-github-build
+2025-06-25T17:21:31.3076948Z ##[group]Getting Git version info
+2025-06-25T17:21:31.3077905Z Working directory is '/home/runner/work/android-github-build/android-github-build'
+2025-06-25T17:21:31.3079248Z [command]/usr/bin/git version
+2025-06-25T17:21:31.3108437Z git version 2.49.0
+2025-06-25T17:21:31.3134416Z ##[endgroup]
+2025-06-25T17:21:31.3148296Z Temporarily overriding HOME='/home/runner/work/_temp/c0074305-4e7c-44d8-80df-0d2c7028c849' before making global git config changes
+2025-06-25T17:21:31.3150824Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-25T17:21:31.3159464Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
+2025-06-25T17:21:31.3192820Z Deleting the contents of '/home/runner/work/android-github-build/android-github-build'
+2025-06-25T17:21:31.3196624Z ##[group]Initializing the repository
+2025-06-25T17:21:31.3200554Z [command]/usr/bin/git init /home/runner/work/android-github-build/android-github-build
+2025-06-25T17:21:31.3271180Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-25T17:21:31.3272567Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-25T17:21:31.3273525Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-25T17:21:31.3274359Z hint:
+2025-06-25T17:21:31.3274863Z hint: 	git config --global init.defaultBranch <name>
+2025-06-25T17:21:31.3275898Z hint:
+2025-06-25T17:21:31.3276890Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-25T17:21:31.3278478Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-25T17:21:31.3279417Z hint:
+2025-06-25T17:21:31.3279830Z hint: 	git branch -m <name>
+2025-06-25T17:21:31.3281195Z Initialized empty Git repository in /home/runner/work/android-github-build/android-github-build/.git/
+2025-06-25T17:21:31.3287094Z [command]/usr/bin/git remote add origin https://github.com/HansPeterRadtke/android-github-build
+2025-06-25T17:21:31.3316958Z ##[endgroup]
+2025-06-25T17:21:31.3317751Z ##[group]Disabling automatic garbage collection
+2025-06-25T17:21:31.3320732Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-25T17:21:31.3348269Z ##[endgroup]
+2025-06-25T17:21:31.3349020Z ##[group]Setting up auth
+2025-06-25T17:21:31.3354855Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-25T17:21:31.3383709Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-25T17:21:31.3640993Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-25T17:21:31.3668877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-25T17:21:31.3887314Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-25T17:21:31.3921857Z ##[endgroup]
+2025-06-25T17:21:31.3937539Z ##[group]Fetching the repository
+2025-06-25T17:21:31.3939174Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3703ead187ddacb2f3835dbddb46d777593535bb:refs/remotes/origin/main
+2025-06-25T17:21:32.6662621Z From https://github.com/HansPeterRadtke/android-github-build
+2025-06-25T17:21:32.6664919Z  * [new ref]         3703ead187ddacb2f3835dbddb46d777593535bb -> origin/main
+2025-06-25T17:21:32.6688451Z ##[endgroup]
+2025-06-25T17:21:32.6689808Z ##[group]Determining the checkout info
+2025-06-25T17:21:32.6691176Z ##[endgroup]
+2025-06-25T17:21:32.6695463Z [command]/usr/bin/git sparse-checkout disable
+2025-06-25T17:21:32.6735743Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-25T17:21:32.6763340Z ##[group]Checking out the ref
+2025-06-25T17:21:32.6766489Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-25T17:21:32.7216266Z Switched to a new branch 'main'
+2025-06-25T17:21:32.7218879Z branch 'main' set up to track 'origin/main'.
+2025-06-25T17:21:32.7225776Z ##[endgroup]
+2025-06-25T17:21:32.7257748Z [command]/usr/bin/git log -1 --format=%H
+2025-06-25T17:21:32.7278880Z 3703ead187ddacb2f3835dbddb46d777593535bb

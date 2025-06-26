@@ -20,6 +20,51 @@
     android:padding="16dp" />
 
   <LinearLayout
+    android:id="@+id/ttsSttLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/audioButtonLayout"
+    android:layout_above="@id/toggleButton"
+    android:padding="16dp">
+
+    <EditText
+      android:id="@+id/textOutput"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Speech-to-text result" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="8dp">
+
+      <Button
+        android:id="@+id/recordButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Record" />
+
+      <Button
+        android:id="@+id/toTextButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="To Text" />
+
+      <Button
+        android:id="@+id/readTextButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Read Text" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/bottomButtons"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"

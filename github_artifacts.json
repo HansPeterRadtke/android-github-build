@@ -1,0 +1,605 @@
+{
+  "total_count": 46,
+  "artifacts": [
+    {
+      "id": 3403590053,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAzNTkwMDUz",
+      "name": "debug-apk",
+      "size_in_bytes": 10002313,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3403590053",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3403590053/zip",
+      "expired": false,
+      "digest": "sha256:5987f02c3a7fc265012fff7250983bc3ee05f24082285084650f02485342aa96",
+      "created_at": "2025-06-25T17:23:30Z",
+      "updated_at": "2025-06-25T17:23:30Z",
+      "expires_at": "2025-09-23T17:21:26Z",
+      "workflow_run": {
+        "id": 15882916532,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "3703ead187ddacb2f3835dbddb46d777593535bb"
+      }
+    },
+    {
+      "id": 3403538428,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAzNTM4NDI4",
+      "name": "debug-apk",
+      "size_in_bytes": 10002272,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3403538428",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3403538428/zip",
+      "expired": false,
+      "digest": "sha256:8f367b7417c7bf870e7635c8077579db5e15d0884ea3f656a7219312190291b6",
+      "created_at": "2025-06-25T17:16:43Z",
+      "updated_at": "2025-06-25T17:16:43Z",
+      "expires_at": "2025-09-23T17:13:59Z",
+      "workflow_run": {
+        "id": 15882774429,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "75d63ea50688e129391457aaa7a3df565d88dd81"
+      }
+    },
+    {
+      "id": 3403100100,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAzMTAwMTAw",
+      "name": "debug-apk",
+      "size_in_bytes": 3493214,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3403100100",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3403100100/zip",
+      "expired": false,
+      "digest": "sha256:caefd3d6ffe66c3e7a89d7b9e6eb151ace5ff27e2bc946b690ab2254f5fff4d4",
+      "created_at": "2025-06-25T16:21:52Z",
+      "updated_at": "2025-06-25T16:21:52Z",
+      "expires_at": "2025-09-23T16:19:54Z",
+      "workflow_run": {
+        "id": 15881710084,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "df8cf34371d858c6f0a57c5d8114ad11355a441c"
+      }
+    },
+    {
+      "id": 3402477219,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAyNDc3MjE5",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3402477219",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3402477219/zip",
+      "expired": false,
+      "digest": "sha256:9179956d0ba00c560025176b52e867e236a1c8dc156eacb95ce3d0c5a2825d09",
+      "created_at": "2025-06-25T15:14:04Z",
+      "updated_at": "2025-06-25T15:14:04Z",
+      "expires_at": "2025-09-23T15:11:21Z",
+      "workflow_run": {
+        "id": 15880185073,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "caf23d2f259ec40c9b9729159e62c43a2f3acc8e"
+      }
+    },
+    {
+      "id": 3401314278,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAxMzE0Mjc4",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3401314278",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3401314278/zip",
+      "expired": false,
+      "digest": "sha256:064527dffc936405942a326c86a3543804c43b2ffe1b9462a1ce0cf4b0810827",
+      "created_at": "2025-06-25T13:14:05Z",
+      "updated_at": "2025-06-25T13:14:05Z",
+      "expires_at": "2025-09-23T13:11:46Z",
+      "workflow_run": {
+        "id": 15877298536,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "95321be923fe0f2e48a77a5a474ec209860de6b2"
+      }
+    },
+    {
+      "id": 3401169713,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAxMTY5NzEz",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3401169713",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3401169713/zip",
+      "expired": false,
+      "digest": "sha256:06da1b3aee4663291e8472e1b2b91a1382673c678fedc544e3ff9e334e76a269",
+      "created_at": "2025-06-25T12:56:34Z",
+      "updated_at": "2025-06-25T12:56:34Z",
+      "expires_at": "2025-09-23T12:54:17Z",
+      "workflow_run": {
+        "id": 15876908067,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "19dc373a39820016812d0e2768b73302267f9bea"
+      }
+    },
+    {
+      "id": 3400927701,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwOTI3NzAx",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400927701",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400927701/zip",
+      "expired": false,
+      "digest": "sha256:3e234c61ad1810218abc578aaebfe4a858bf70a9f793ffbe0b1715421337f363",
+      "created_at": "2025-06-25T12:26:22Z",
+      "updated_at": "2025-06-25T12:26:22Z",
+      "expires_at": "2025-09-23T12:24:01Z",
+      "workflow_run": {
+        "id": 15876238521,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "c8079e836edb65dbc7a64269994a2b6e5a458bcb"
+      }
+    },
+    {
+      "id": 3400893103,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwODkzMTAz",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400893103",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400893103/zip",
+      "expired": false,
+      "digest": "sha256:6407e0bfd59c19e821e0f99ff2d2b95aac500f2ecc684ff7055b817baf69e1e4",
+      "created_at": "2025-06-25T12:21:38Z",
+      "updated_at": "2025-06-25T12:21:38Z",
+      "expires_at": "2025-09-23T12:18:31Z",
+      "workflow_run": {
+        "id": 15876119490,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "7cdf5cf73186223acdbfaf9523c2074a34dcd07d"
+      }
+    },
+    {
+      "id": 3400860910,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwODYwOTEw",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400860910",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400860910/zip",
+      "expired": false,
+      "digest": "sha256:52e40a53e97924e7fa6b38a1d0008715325d4aa79fcb1906a9788f9d5ea6866c",
+      "created_at": "2025-06-25T12:17:31Z",
+      "updated_at": "2025-06-25T12:17:31Z",
+      "expires_at": "2025-09-23T12:14:56Z",
+      "workflow_run": {
+        "id": 15876043881,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "4ec4133b17092247ee48689c6200f2a319f89de9"
+      }
+    },
+    {
+      "id": 3400819511,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwODE5NTEx",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400819511",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400819511/zip",
+      "expired": false,
+      "digest": "sha256:ca0226f4b170b99c7ca010601f7e6edd3c42e02ae431b4d6b1f87be4e4655f89",
+      "created_at": "2025-06-25T12:12:18Z",
+      "updated_at": "2025-06-25T12:12:18Z",
+      "expires_at": "2025-09-23T12:09:53Z",
+      "workflow_run": {
+        "id": 15875932463,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "628af0f90ea0214454f22d1e6f339774982de109"
+      }
+    },
+    {
+      "id": 3400794714,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNzk0NzE0",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400794714",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400794714/zip",
+      "expired": false,
+      "digest": "sha256:60cebbe9ac2ea64dbdeb3caae6b46a5a8bff7d58dbfd51693feb1436ea2e5f5e",
+      "created_at": "2025-06-25T12:08:59Z",
+      "updated_at": "2025-06-25T12:08:59Z",
+      "expires_at": "2025-09-23T12:08:11Z",
+      "workflow_run": {
+        "id": 15875896369,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "0ec687b1c73034024b19750662ea23b514686ff4"
+      }
+    },
+    {
+      "id": 3400736674,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNzM2Njc0",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400736674",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400736674/zip",
+      "expired": false,
+      "digest": "sha256:000c3c88c11d5c51b43be6b6898c5f0879f6111868e541f324e457716742c76f",
+      "created_at": "2025-06-25T12:00:26Z",
+      "updated_at": "2025-06-25T12:00:26Z",
+      "expires_at": "2025-09-23T11:58:23Z",
+      "workflow_run": {
+        "id": 15875691418,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "8c5c62f1273ad0106687ce8b799664b27b2fd81c"
+      }
+    },
+    {
+      "id": 3400707746,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNzA3NzQ2",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400707746",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400707746/zip",
+      "expired": false,
+      "digest": "sha256:15c8b30e7762872f9cfb6903cb21746e1a21441e30fae74ffeea153919b00ace",
+      "created_at": "2025-06-25T11:56:06Z",
+      "updated_at": "2025-06-25T11:56:06Z",
+      "expires_at": "2025-09-23T11:55:10Z",
+      "workflow_run": {
+        "id": 15875632665,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "16b6ebc3a771d9e9eea473eb9562f9e0ac2d9bd0"
+      }
+    },
+    {
+      "id": 3400661687,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNjYxNjg3",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400661687",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400661687/zip",
+      "expired": false,
+      "digest": "sha256:c23623a28def8caaf3f15a98d2ef25c7ec70f4b9566f841919d1cf2313d9aa30",
+      "created_at": "2025-06-25T11:49:17Z",
+      "updated_at": "2025-06-25T11:49:17Z",
+      "expires_at": "2025-09-23T11:48:20Z",
+      "workflow_run": {
+        "id": 15875498238,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "856d7657edbc9f54df8e694ad4bab2f97cb8408d"
+      }
+    },
+    {
+      "id": 3400656776,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNjU2Nzc2",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400656776",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400656776/zip",
+      "expired": false,
+      "digest": "sha256:28ec924f116decdbaeea4750755b0ac0b44f57b589d73168367448a5abad3de1",
+      "created_at": "2025-06-25T11:48:36Z",
+      "updated_at": "2025-06-25T11:48:36Z",
+      "expires_at": "2025-09-23T11:45:44Z",
+      "workflow_run": {
+        "id": 15875447820,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "15730f947bca62ce2144ede7fd65c16865db1dd9"
+      }
+    },
+    {
+      "id": 3400617351,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNjE3MzUx",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400617351",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400617351/zip",
+      "expired": false,
+      "digest": "sha256:9c6e3412cd5c9fba76529e02de18921dd54b6b904c0b6054f3d2044bd6638994",
+      "created_at": "2025-06-25T11:42:34Z",
+      "updated_at": "2025-06-25T11:42:34Z",
+      "expires_at": "2025-09-23T11:40:50Z",
+      "workflow_run": {
+        "id": 15875352179,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "3f00c2c092cf156d505980c4b18785960441a657"
+      }
+    },
+    {
+      "id": 3400593779,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNTkzNzc5",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400593779",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400593779/zip",
+      "expired": false,
+      "digest": "sha256:5492d363cb039118e3bc186132ba7d626562bd8ff9b4eaff683b44a739cf5c77",
+      "created_at": "2025-06-25T11:39:04Z",
+      "updated_at": "2025-06-25T11:39:04Z",
+      "expires_at": "2025-09-23T11:37:30Z",
+      "workflow_run": {
+        "id": 15875285325,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "ea275e59a2a85c0dfa8afbb1f8df274998190af8"
+      }
+    },
+    {
+      "id": 3400585714,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNTg1NzE0",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400585714",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400585714/zip",
+      "expired": false,
+      "digest": "sha256:e1690d47b819a750cba08fcd907d4572fa6e27e10b06a18d903fa2b0c715aadf",
+      "created_at": "2025-06-25T11:37:52Z",
+      "updated_at": "2025-06-25T11:37:52Z",
+      "expires_at": "2025-09-23T11:35:26Z",
+      "workflow_run": {
+        "id": 15875245059,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "a23e0e9a324de464566352d35d074f713a7bdd62"
+      }
+    },
+    {
+      "id": 3400550997,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwNTUwOTk3",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400550997",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400550997/zip",
+      "expired": false,
+      "digest": "sha256:4df1e014736b5399f637a6eee89f4b449f4122cc4dcdb1068f21d623d1fbf4f4",
+      "created_at": "2025-06-25T11:32:46Z",
+      "updated_at": "2025-06-25T11:32:46Z",
+      "expires_at": "2025-09-23T11:32:08Z",
+      "workflow_run": {
+        "id": 15875176212,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "0b94783077a5f4b5e4bab2d174d316048568524b"
+      }
+    },
+    {
+      "id": 3400237532,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwMjM3NTMy",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400237532",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400237532/zip",
+      "expired": false,
+      "digest": "sha256:a4644e1245e2942996530784fb1ac6e4fecaf2bdea6adaf29c5ef326e0420fa2",
+      "created_at": "2025-06-25T10:46:38Z",
+      "updated_at": "2025-06-25T10:46:38Z",
+      "expires_at": "2025-09-23T10:45:56Z",
+      "workflow_run": {
+        "id": 15874268694,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "9f8f17f2632cd21dad7f89dce0f1f6cb3e015bf6"
+      }
+    },
+    {
+      "id": 3400196112,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwMTk2MTEy",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400196112",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400196112/zip",
+      "expired": false,
+      "digest": "sha256:ca645e4438ccc7231ae3f7945ba18afbcca25829cec76adcb35b742702b4786a",
+      "created_at": "2025-06-25T10:40:19Z",
+      "updated_at": "2025-06-25T10:40:19Z",
+      "expires_at": "2025-09-23T10:39:35Z",
+      "workflow_run": {
+        "id": 15874144899,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "334def69b4c8b7009a4b3147ec5e426e2b8d5199"
+      }
+    },
+    {
+      "id": 3400183168,
+      "node_id": "MDg6QXJ0aWZhY3QzNDAwMTgzMTY4",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400183168",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3400183168/zip",
+      "expired": false,
+      "digest": "sha256:a1902d6c0009cfb9269ca8431a7e5ca71abb021fd30a9aa5aafcbb11c98aa8a4",
+      "created_at": "2025-06-25T10:38:21Z",
+      "updated_at": "2025-06-25T10:38:21Z",
+      "expires_at": "2025-09-23T10:37:45Z",
+      "workflow_run": {
+        "id": 15874109219,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "a13c5acd50ff0deefb37bdf001ff2a1a61234bf9"
+      }
+    },
+    {
+      "id": 3388923782,
+      "node_id": "MDg6QXJ0aWZhY3QzMzg4OTIzNzgy",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3388923782",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3388923782/zip",
+      "expired": false,
+      "digest": "sha256:4fad61c6c8e017af6b05924becfb02d5ba7a4a5a766cebb44b3d0376c4cb8c58",
+      "created_at": "2025-06-24T04:34:16Z",
+      "updated_at": "2025-06-24T04:34:16Z",
+      "expires_at": "2025-09-22T04:33:27Z",
+      "workflow_run": {
+        "id": 15841300977,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "e6c132a71c1ef88e8516653b9cabdc576d37f113"
+      }
+    },
+    {
+      "id": 3384679877,
+      "node_id": "MDg6QXJ0aWZhY3QzMzg0Njc5ODc3",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3384679877",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3384679877/zip",
+      "expired": false,
+      "digest": "sha256:8264b9328fb2c408c647ae6c039ad209ebc1a5d70e0c580258348c082af198c7",
+      "created_at": "2025-06-23T16:02:20Z",
+      "updated_at": "2025-06-23T16:02:20Z",
+      "expires_at": "2025-09-21T16:01:38Z",
+      "workflow_run": {
+        "id": 15829223855,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "5ec4caf5ea57692244e5dc13d105d3821c984fcf"
+      }
+    },
+    {
+      "id": 3382231917,
+      "node_id": "MDg6QXJ0aWZhY3QzMzgyMjMxOTE3",
+      "name": "error-logs",
+      "size_in_bytes": 503,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3382231917",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3382231917/zip",
+      "expired": false,
+      "digest": "sha256:f908a59cc882e57abe39e9325b18cbe9eda6ee548212b9a24b976090dec1c115",
+      "created_at": "2025-06-23T11:11:12Z",
+      "updated_at": "2025-06-23T11:11:12Z",
+      "expires_at": "2025-09-21T11:10:27Z",
+      "workflow_run": {
+        "id": 15822636765,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "42789ea89a192b4908d0987aaef617fcbdb80895"
+      }
+    },
+    {
+      "id": 3379857910,
+      "node_id": "MDg6QXJ0aWZhY3QzMzc5ODU3OTEw",
+      "name": "error-logs",
+      "size_in_bytes": 585,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3379857910",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3379857910/zip",
+      "expired": false,
+      "digest": "sha256:c6e9865e6e6999b57eca44053900712b444617fcd4eed889e7f521640a688fec",
+      "created_at": "2025-06-23T04:11:50Z",
+      "updated_at": "2025-06-23T04:11:50Z",
+      "expires_at": "2025-09-21T04:11:15Z",
+      "workflow_run": {
+        "id": 15815036692,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "39053d2f7f8d27ae909a4747cf39e12c95a6c425"
+      }
+    },
+    {
+      "id": 3378457490,
+      "node_id": "MDg6QXJ0aWZhY3QzMzc4NDU3NDkw",
+      "name": "error-logs",
+      "size_in_bytes": 620,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3378457490",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3378457490/zip",
+      "expired": false,
+      "digest": "sha256:cac98773a1494603050934539d18d2d91c50c0730b77e6d1f2e6729d847f53bf",
+      "created_at": "2025-06-22T17:59:53Z",
+      "updated_at": "2025-06-22T17:59:53Z",
+      "expires_at": "2025-09-20T17:56:02Z",
+      "workflow_run": {
+        "id": 15809309539,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "8dcf53c74b5ce94a21026d3756d9e015fba42dca"
+      }
+    },
+    {
+      "id": 3378438586,
+      "node_id": "MDg6QXJ0aWZhY3QzMzc4NDM4NTg2",
+      "name": "error-logs",
+      "size_in_bytes": 620,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3378438586",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3378438586/zip",
+      "expired": false,
+      "digest": "sha256:74411c8be1a03969db4932e803a4ba1ec0b28f09aadfb6a162f3b9ee36bdfebe",
+      "created_at": "2025-06-22T17:47:43Z",
+      "updated_at": "2025-06-22T17:47:43Z",
+      "expires_at": "2025-09-20T17:44:29Z",
+      "workflow_run": {
+        "id": 15809226834,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "c38a517938fd33391f372537607abc29ea333a64"
+      }
+    },
+    {
+      "id": 3378426750,
+      "node_id": "MDg6QXJ0aWZhY3QzMzc4NDI2NzUw",
+      "name": "error-logs",
+      "size_in_bytes": 620,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3378426750",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3378426750/zip",
+      "expired": false,
+      "digest": "sha256:db21d134a2bf1a0c3e1ec6bf25db93e91b6725c3dfd5fb7fe58d6b6f5d3caf76",
+      "created_at": "2025-06-22T17:40:30Z",
+      "updated_at": "2025-06-22T17:40:30Z",
+      "expires_at": "2025-09-20T17:36:43Z",
+      "workflow_run": {
+        "id": 15809164035,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "974c020916c75bd100c84ab72720715a5013d845"
+      }
+    },
+    {
+      "id": 3140423157,
+      "node_id": "MDg6QXJ0aWZhY3QzMTQwNDIzMTU3",
+      "name": "error-logs",
+      "size_in_bytes": 620,
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3140423157",
+      "archive_download_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/artifacts/3140423157/zip",
+      "expired": false,
+      "digest": "sha256:21f391938baf0f8b71887f5828971fce3186d1a2af770c5a1cdd0b2c98fb28a4",
+      "created_at": "2025-05-16T15:44:30Z",
+      "updated_at": "2025-05-16T15:44:30Z",
+      "expires_at": "2025-08-14T15:41:12Z",
+      "workflow_run": {
+        "id": 15072215889,
+        "repository_id": 983290582,
+        "head_repository_id": 983290582,
+        "head_branch": "main",
+        "head_sha": "d5791dd2300641eef87b3b49c23799f1b020cb48"
+      }
+    }
+  ]
+}
