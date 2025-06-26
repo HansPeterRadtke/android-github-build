@@ -2,21 +2,21 @@
   "total_count": 1,
   "jobs": [
     {
-      "id": 44853097280,
-      "run_id": 15903787163,
+      "id": 44855591106,
+      "run_id": 15904497837,
       "workflow_name": "Build and Release APK",
-      "head_branch": "v1.1.4",
-      "run_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/runs/15903787163",
+      "head_branch": "v1.1.5",
+      "run_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/runs/15904497837",
       "run_attempt": 1,
-      "node_id": "CR_kwDOOpvS1s8AAAAKcXPzQA",
-      "head_sha": "2d573b6c1d6df988ff20b48900c6eab57a477c6d",
-      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/jobs/44853097280",
-      "html_url": "https://github.com/HansPeterRadtke/android-github-build/actions/runs/15903787163/job/44853097280",
+      "node_id": "CR_kwDOOpvS1s8AAAAKcZoAwg",
+      "head_sha": "c7ff290c1bc62af5724bdd61361403608bca806c",
+      "url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/actions/jobs/44855591106",
+      "html_url": "https://github.com/HansPeterRadtke/android-github-build/actions/runs/15904497837/job/44855591106",
       "status": "completed",
       "conclusion": "failure",
-      "created_at": "2025-06-26T13:53:59Z",
-      "started_at": "2025-06-26T13:54:02Z",
-      "completed_at": "2025-06-26T13:56:49Z",
+      "created_at": "2025-06-26T14:22:44Z",
+      "started_at": "2025-06-26T14:22:50Z",
+      "completed_at": "2025-06-26T14:24:22Z",
       "name": "build",
       "steps": [
         {
@@ -24,80 +24,80 @@
           "status": "completed",
           "conclusion": "success",
           "number": 1,
-          "started_at": "2025-06-26T13:54:02Z",
-          "completed_at": "2025-06-26T13:54:04Z"
+          "started_at": "2025-06-26T14:22:50Z",
+          "completed_at": "2025-06-26T14:22:51Z"
         },
         {
           "name": "Run actions/checkout@v4",
           "status": "completed",
           "conclusion": "success",
           "number": 2,
-          "started_at": "2025-06-26T13:54:04Z",
-          "completed_at": "2025-06-26T13:54:05Z"
+          "started_at": "2025-06-26T14:22:52Z",
+          "completed_at": "2025-06-26T14:22:52Z"
         },
         {
           "name": "Run actions/setup-java@v4",
           "status": "completed",
           "conclusion": "success",
           "number": 3,
-          "started_at": "2025-06-26T13:54:05Z",
-          "completed_at": "2025-06-26T13:54:05Z"
+          "started_at": "2025-06-26T14:22:52Z",
+          "completed_at": "2025-06-26T14:22:53Z"
         },
         {
           "name": "Setup Gradle Wrapper",
           "status": "completed",
           "conclusion": "success",
           "number": 4,
-          "started_at": "2025-06-26T13:54:05Z",
-          "completed_at": "2025-06-26T13:55:36Z"
+          "started_at": "2025-06-26T14:22:53Z",
+          "completed_at": "2025-06-26T14:23:38Z"
         },
         {
           "name": "Build APK",
           "status": "completed",
           "conclusion": "failure",
           "number": 5,
-          "started_at": "2025-06-26T13:55:36Z",
-          "completed_at": "2025-06-26T13:56:47Z"
+          "started_at": "2025-06-26T14:23:38Z",
+          "completed_at": "2025-06-26T14:24:20Z"
         },
         {
           "name": "Create GitHub Release",
           "status": "completed",
           "conclusion": "skipped",
           "number": 6,
-          "started_at": "2025-06-26T13:56:47Z",
-          "completed_at": "2025-06-26T13:56:47Z"
+          "started_at": "2025-06-26T14:24:20Z",
+          "completed_at": "2025-06-26T14:24:20Z"
         },
         {
           "name": "Post Run actions/setup-java@v4",
           "status": "completed",
           "conclusion": "success",
           "number": 11,
-          "started_at": "2025-06-26T13:56:47Z",
-          "completed_at": "2025-06-26T13:56:47Z"
+          "started_at": "2025-06-26T14:24:20Z",
+          "completed_at": "2025-06-26T14:24:20Z"
         },
         {
           "name": "Post Run actions/checkout@v4",
           "status": "completed",
           "conclusion": "success",
           "number": 12,
-          "started_at": "2025-06-26T13:56:47Z",
-          "completed_at": "2025-06-26T13:56:48Z"
+          "started_at": "2025-06-26T14:24:20Z",
+          "completed_at": "2025-06-26T14:24:20Z"
         },
         {
           "name": "Complete job",
           "status": "completed",
           "conclusion": "success",
           "number": 13,
-          "started_at": "2025-06-26T13:56:48Z",
-          "completed_at": "2025-06-26T13:56:48Z"
+          "started_at": "2025-06-26T14:24:21Z",
+          "completed_at": "2025-06-26T14:24:21Z"
         }
       ],
-      "check_run_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/check-runs/44853097280",
+      "check_run_url": "https://api.github.com/repos/HansPeterRadtke/android-github-build/check-runs/44855591106",
       "labels": [
         "ubuntu-latest"
       ],
-      "runner_id": 1000000121,
-      "runner_name": "GitHub Actions 1000000121",
+      "runner_id": 1000000122,
+      "runner_name": "GitHub Actions 1000000122",
       "runner_group_id": 0,
       "runner_group_name": "GitHub Actions"
     }

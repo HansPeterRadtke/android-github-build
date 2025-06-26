@@ -1,32 +1,32 @@
-﻿2025-06-26T13:54:05.7738134Z ##[group]Run gradle wrapper
-2025-06-26T13:54:05.7739094Z [36;1mgradle wrapper[0m
-2025-06-26T13:54:05.7739922Z [36;1mchmod +x ./gradlew[0m
-2025-06-26T13:54:05.7810431Z shell: /usr/bin/bash -e {0}
-2025-06-26T13:54:05.7811316Z env:
-2025-06-26T13:54:05.7812359Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T13:54:05.7814215Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T13:54:05.7815626Z ##[endgroup]
-2025-06-26T13:54:11.3109974Z 
-2025-06-26T13:54:11.3111434Z Welcome to Gradle 8.14.1!
-2025-06-26T13:54:11.3111981Z 
-2025-06-26T13:54:11.3113317Z Here are the highlights of this release:
-2025-06-26T13:54:11.3119969Z  - Java 24 support
-2025-06-26T13:54:11.3121720Z  - GraalVM Native Image toolchain selection
-2025-06-26T13:54:11.3122413Z  - Enhancements to test reporting
-2025-06-26T13:54:11.3122986Z  - Build Authoring improvements
-2025-06-26T13:54:11.3123426Z 
-2025-06-26T13:54:11.3124224Z For more details see https://docs.gradle.org/8.14.1/release-notes.html
-2025-06-26T13:54:11.3124893Z 
-2025-06-26T13:54:11.9002973Z Starting a Gradle Daemon (subsequent builds will be faster)
-2025-06-26T13:55:36.3018420Z > Task :wrapper
-2025-06-26T13:55:36.4003472Z 
-2025-06-26T13:55:36.4049170Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
-2025-06-26T13:55:36.4053878Z 
-2025-06-26T13:55:36.4057947Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-2025-06-26T13:55:36.4061926Z 
-2025-06-26T13:55:36.4065613Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-2025-06-26T13:55:36.4072718Z 
-2025-06-26T13:55:36.4073649Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-2025-06-26T13:55:36.4074981Z 
-2025-06-26T13:55:36.4075159Z BUILD SUCCESSFUL in 1m 29s
-2025-06-26T13:55:36.4075541Z 1 actionable task: 1 executed
+﻿2025-06-26T14:22:53.1148580Z ##[group]Run gradle wrapper
+2025-06-26T14:22:53.1149214Z [36;1mgradle wrapper[0m
+2025-06-26T14:22:53.1149594Z [36;1mchmod +x ./gradlew[0m
+2025-06-26T14:22:53.1219132Z shell: /usr/bin/bash -e {0}
+2025-06-26T14:22:53.1219552Z env:
+2025-06-26T14:22:53.1220015Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T14:22:53.1220657Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T14:22:53.1221189Z ##[endgroup]
+2025-06-26T14:22:56.6875950Z 
+2025-06-26T14:22:56.6880799Z Welcome to Gradle 8.14.1!
+2025-06-26T14:22:56.6884296Z 
+2025-06-26T14:22:56.6889178Z Here are the highlights of this release:
+2025-06-26T14:22:56.6890044Z  - Java 24 support
+2025-06-26T14:22:56.6890615Z  - GraalVM Native Image toolchain selection
+2025-06-26T14:22:56.6891269Z  - Enhancements to test reporting
+2025-06-26T14:22:56.6891868Z  - Build Authoring improvements
+2025-06-26T14:22:56.6892299Z 
+2025-06-26T14:22:56.6892995Z For more details see https://docs.gradle.org/8.14.1/release-notes.html
+2025-06-26T14:22:56.6893687Z 
+2025-06-26T14:22:57.2859359Z Starting a Gradle Daemon (subsequent builds will be faster)
+2025-06-26T14:23:37.6875821Z > Task :wrapper
+2025-06-26T14:23:37.7867406Z 
+2025-06-26T14:23:37.7906274Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
+2025-06-26T14:23:37.7926563Z 
+2025-06-26T14:23:37.7928219Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2025-06-26T14:23:37.7930173Z 
+2025-06-26T14:23:37.7931967Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2025-06-26T14:23:37.7934060Z 
+2025-06-26T14:23:37.7936615Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2025-06-26T14:23:37.7939204Z 
+2025-06-26T14:23:37.7940559Z BUILD SUCCESSFUL in 43s
+2025-06-26T14:23:37.7961609Z 1 actionable task: 1 executed
