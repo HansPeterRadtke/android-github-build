@@ -31,3 +31,11 @@ dependencies {
 repositories {
     mavenCentral()
 }
+repositories { mavenCentral() }
+
+dependencies {
+    implementation "com.bihe0832.android:lib-sherpa-onnx:6.25.21"
+    implementation "com.bihe0832.android:lib-onnx:6.16.7"
+    implementation "com.bihe0832.android:lib-asr-min:6.26.2"
+    implementation "com.bihe0832.android:lib-tts:6.26.2"
+}
