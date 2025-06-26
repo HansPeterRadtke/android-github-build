@@ -1,321 +1,274 @@
-﻿2025-06-26T08:39:10.3006113Z Current runner version: '2.325.0'
-2025-06-26T08:39:10.3030487Z ##[group]Runner Image Provisioner
-2025-06-26T08:39:10.3031356Z Hosted Compute Agent
-2025-06-26T08:39:10.3031883Z Version: 20250620.352
-2025-06-26T08:39:10.3032600Z Commit: f262f3aba23b10ea191b2a62bdee1ca4c3d344da
-2025-06-26T08:39:10.3033285Z Build Date: 2025-06-20T19:27:17Z
-2025-06-26T08:39:10.3033862Z ##[endgroup]
-2025-06-26T08:39:10.3034476Z ##[group]Operating System
-2025-06-26T08:39:10.3035064Z Ubuntu
-2025-06-26T08:39:10.3035539Z 24.04.2
-2025-06-26T08:39:10.3036045Z LTS
-2025-06-26T08:39:10.3036506Z ##[endgroup]
-2025-06-26T08:39:10.3036974Z ##[group]Runner Image
-2025-06-26T08:39:10.3037601Z Image: ubuntu-24.04
-2025-06-26T08:39:10.3038085Z Version: 20250602.3.0
-2025-06-26T08:39:10.3039101Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
-2025-06-26T08:39:10.3041046Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
-2025-06-26T08:39:10.3042055Z ##[endgroup]
-2025-06-26T08:39:10.3043192Z ##[group]GITHUB_TOKEN Permissions
-2025-06-26T08:39:10.3045005Z Contents: write
-2025-06-26T08:39:10.3045638Z Metadata: read
-2025-06-26T08:39:10.3046133Z ##[endgroup]
-2025-06-26T08:39:10.3048239Z Secret source: Actions
-2025-06-26T08:39:10.3049143Z Prepare workflow directory
-2025-06-26T08:39:10.3428308Z Prepare all required actions
-2025-06-26T08:39:10.3473583Z Getting action download info
-2025-06-26T08:39:13.3478721Z ##[group]Download immutable action package 'actions/checkout@v4'
-2025-06-26T08:39:13.3479973Z Version: 4.2.2
-2025-06-26T08:39:13.3481116Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
-2025-06-26T08:39:13.3482460Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
-2025-06-26T08:39:13.3483237Z ##[endgroup]
-2025-06-26T08:39:13.4502384Z ##[group]Download immutable action package 'actions/setup-java@v4'
-2025-06-26T08:39:13.4503211Z Version: 4.7.1
-2025-06-26T08:39:13.4504048Z Digest: sha256:23223d64943473efb4336f60463c0429cd4f422cd5fc6c48a5cf0d5907c1aeac
-2025-06-26T08:39:13.4505072Z Source commit SHA: c5195efecf7bdfc987ee8bae7a71cb8b11521c00
-2025-06-26T08:39:13.4505851Z ##[endgroup]
-2025-06-26T08:39:13.8114595Z Download action repository 'softprops/action-gh-release@v2' (SHA:72f2c25fcb47643c292f7107632f7a47c1df5cd8)
-2025-06-26T08:39:14.4801401Z Complete job name: build
-2025-06-26T08:39:14.5582193Z ##[group]Run actions/checkout@v4
-2025-06-26T08:39:14.5583501Z with:
-2025-06-26T08:39:14.5584395Z   repository: HansPeterRadtke/android-github-build
-2025-06-26T08:39:14.5585811Z   token: ***
-2025-06-26T08:39:14.5586543Z   ssh-strict: true
-2025-06-26T08:39:14.5587307Z   ssh-user: git
-2025-06-26T08:39:14.5588085Z   persist-credentials: true
-2025-06-26T08:39:14.5588962Z   clean: true
-2025-06-26T08:39:14.5590044Z   sparse-checkout-cone-mode: true
-2025-06-26T08:39:14.5591018Z   fetch-depth: 1
-2025-06-26T08:39:14.5591764Z   fetch-tags: false
-2025-06-26T08:39:14.5592569Z   show-progress: true
-2025-06-26T08:39:14.5593366Z   lfs: false
-2025-06-26T08:39:14.5594155Z   submodules: false
-2025-06-26T08:39:14.5594991Z   set-safe-directory: true
-2025-06-26T08:39:14.5596197Z ##[endgroup]
-2025-06-26T08:39:14.6712677Z Syncing repository: HansPeterRadtke/android-github-build
-2025-06-26T08:39:14.6715572Z ##[group]Getting Git version info
-2025-06-26T08:39:14.6717294Z Working directory is '/home/runner/work/android-github-build/android-github-build'
-2025-06-26T08:39:14.6719845Z [command]/usr/bin/git version
-2025-06-26T08:39:14.6787749Z git version 2.49.0
-2025-06-26T08:39:14.6815571Z ##[endgroup]
-2025-06-26T08:39:14.6832104Z Temporarily overriding HOME='/home/runner/work/_temp/3e30d78b-b2e7-4f8c-a95b-9952f6ddd2de' before making global git config changes
-2025-06-26T08:39:14.6836950Z Adding repository directory to the temporary git global config as a safe directory
-2025-06-26T08:39:14.6846778Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
-2025-06-26T08:39:14.6884501Z Deleting the contents of '/home/runner/work/android-github-build/android-github-build'
-2025-06-26T08:39:14.6888853Z ##[group]Initializing the repository
-2025-06-26T08:39:14.6893482Z [command]/usr/bin/git init /home/runner/work/android-github-build/android-github-build
-2025-06-26T08:39:14.6976620Z hint: Using 'master' as the name for the initial branch. This default branch name
-2025-06-26T08:39:14.6978747Z hint: is subject to change. To configure the initial branch name to use in all
-2025-06-26T08:39:14.6980805Z hint: of your new repositories, which will suppress this warning, call:
-2025-06-26T08:39:14.6982156Z hint:
-2025-06-26T08:39:14.6983188Z hint: 	git config --global init.defaultBranch <name>
-2025-06-26T08:39:14.6984420Z hint:
-2025-06-26T08:39:14.6986050Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2025-06-26T08:39:14.6988967Z hint: 'development'. The just-created branch can be renamed via this command:
-2025-06-26T08:39:14.6991756Z hint:
-2025-06-26T08:39:14.6993141Z hint: 	git branch -m <name>
-2025-06-26T08:39:14.6996358Z Initialized empty Git repository in /home/runner/work/android-github-build/android-github-build/.git/
-2025-06-26T08:39:14.7002895Z [command]/usr/bin/git remote add origin https://github.com/HansPeterRadtke/android-github-build
-2025-06-26T08:39:14.7036431Z ##[endgroup]
-2025-06-26T08:39:14.7038902Z ##[group]Disabling automatic garbage collection
-2025-06-26T08:39:14.7041320Z [command]/usr/bin/git config --local gc.auto 0
-2025-06-26T08:39:14.7071218Z ##[endgroup]
-2025-06-26T08:39:14.7073509Z ##[group]Setting up auth
-2025-06-26T08:39:14.7078611Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-06-26T08:39:14.7112091Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-06-26T08:39:14.7433159Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-06-26T08:39:14.7464970Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-06-26T08:39:14.7682120Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2025-06-26T08:39:14.7715988Z ##[endgroup]
-2025-06-26T08:39:14.7717389Z ##[group]Fetching the repository
-2025-06-26T08:39:14.7734283Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b0469a334cc3a36885792cc01a217482bcee0855:refs/tags/v1.0.15
-2025-06-26T08:39:15.5423500Z From https://github.com/HansPeterRadtke/android-github-build
-2025-06-26T08:39:15.5424325Z  * [new ref]         b0469a334cc3a36885792cc01a217482bcee0855 -> v1.0.15
-2025-06-26T08:39:15.5452066Z ##[endgroup]
-2025-06-26T08:39:15.5452606Z ##[group]Determining the checkout info
-2025-06-26T08:39:15.5454584Z ##[endgroup]
-2025-06-26T08:39:15.5459362Z [command]/usr/bin/git sparse-checkout disable
-2025-06-26T08:39:15.5498372Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2025-06-26T08:39:15.5524712Z ##[group]Checking out the ref
-2025-06-26T08:39:15.5528257Z [command]/usr/bin/git checkout --progress --force refs/tags/v1.0.15
-2025-06-26T08:39:15.5803310Z Note: switching to 'refs/tags/v1.0.15'.
-2025-06-26T08:39:15.5803666Z 
-2025-06-26T08:39:15.5803913Z You are in 'detached HEAD' state. You can look around, make experimental
-2025-06-26T08:39:15.5804468Z changes and commit them, and you can discard any commits you make in this
-2025-06-26T08:39:15.5804998Z state without impacting any branches by switching back to a branch.
-2025-06-26T08:39:15.5805304Z 
-2025-06-26T08:39:15.5805517Z If you want to create a new branch to retain commits you create, you may
-2025-06-26T08:39:15.5806023Z do so (now or later) by using -c with the switch command. Example:
-2025-06-26T08:39:15.5806312Z 
-2025-06-26T08:39:15.5806429Z   git switch -c <new-branch-name>
-2025-06-26T08:39:15.5806866Z 
-2025-06-26T08:39:15.5806977Z Or undo this operation with:
-2025-06-26T08:39:15.5807153Z 
-2025-06-26T08:39:15.5807249Z   git switch -
-2025-06-26T08:39:15.5807396Z 
-2025-06-26T08:39:15.5807636Z Turn off this advice by setting config variable advice.detachedHead to false
-2025-06-26T08:39:15.5807973Z 
-2025-06-26T08:39:15.5808143Z HEAD is now at b0469a3 Fix missing Sherpa dependencies
-2025-06-26T08:39:15.5816598Z ##[endgroup]
-2025-06-26T08:39:15.5852260Z [command]/usr/bin/git log -1 --format=%H
-2025-06-26T08:39:15.5873643Z b0469a334cc3a36885792cc01a217482bcee0855
-2025-06-26T08:39:15.6117392Z ##[group]Run actions/setup-java@v4
-2025-06-26T08:39:15.6117677Z with:
-2025-06-26T08:39:15.6117856Z   distribution: temurin
-2025-06-26T08:39:15.6118061Z   java-version: 17
-2025-06-26T08:39:15.6118249Z   java-package: jdk
-2025-06-26T08:39:15.6118448Z   check-latest: false
-2025-06-26T08:39:15.6118640Z   server-id: github
-2025-06-26T08:39:15.6118834Z   server-username: GITHUB_ACTOR
-2025-06-26T08:39:15.6119096Z   server-password: GITHUB_TOKEN
-2025-06-26T08:39:15.6119326Z   overwrite-settings: true
-2025-06-26T08:39:15.6119844Z   job-status: success
-2025-06-26T08:39:15.6120161Z   token: ***
-2025-06-26T08:39:15.6120346Z ##[endgroup]
-2025-06-26T08:39:15.8064272Z ##[group]Installed distributions
-2025-06-26T08:39:15.8116066Z Resolved Java 17.0.15+6 from tool-cache
-2025-06-26T08:39:15.8116610Z Setting Java 17.0.15+6 as the default
-2025-06-26T08:39:15.8129909Z Creating toolchains.xml for JDK version 17 from temurin
-2025-06-26T08:39:15.8205052Z Writing to /home/runner/.m2/toolchains.xml
-2025-06-26T08:39:15.8205569Z 
-2025-06-26T08:39:15.8205740Z Java configuration:
-2025-06-26T08:39:15.8206119Z   Distribution: temurin
-2025-06-26T08:39:15.8206483Z   Version: 17.0.15+6
-2025-06-26T08:39:15.8207166Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T08:39:15.8207668Z 
-2025-06-26T08:39:15.8210215Z ##[endgroup]
-2025-06-26T08:39:15.8227631Z Creating settings.xml with server-id: github
-2025-06-26T08:39:15.8232339Z Writing to /home/runner/.m2/settings.xml
-2025-06-26T08:39:15.8351576Z ##[group]Run gradle wrapper
-2025-06-26T08:39:15.8351900Z [36;1mgradle wrapper[0m
-2025-06-26T08:39:15.8352124Z [36;1mchmod +x ./gradlew[0m
-2025-06-26T08:39:15.8425934Z shell: /usr/bin/bash -e {0}
-2025-06-26T08:39:15.8426203Z env:
-2025-06-26T08:39:15.8426497Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T08:39:15.8426974Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T08:39:15.8427335Z ##[endgroup]
-2025-06-26T08:39:20.2926382Z 
-2025-06-26T08:39:20.2928517Z Welcome to Gradle 8.14.1!
-2025-06-26T08:39:20.2929248Z 
-2025-06-26T08:39:20.2929750Z Here are the highlights of this release:
-2025-06-26T08:39:20.2930334Z  - Java 24 support
-2025-06-26T08:39:20.2933760Z  - GraalVM Native Image toolchain selection
-2025-06-26T08:39:20.2934721Z  - Enhancements to test reporting
-2025-06-26T08:39:20.2935658Z  - Build Authoring improvements
-2025-06-26T08:39:20.2941294Z 
-2025-06-26T08:39:20.2941786Z For more details see https://docs.gradle.org/8.14.1/release-notes.html
-2025-06-26T08:39:20.2942286Z 
-2025-06-26T08:39:20.5912145Z Starting a Gradle Daemon (subsequent builds will be faster)
-2025-06-26T08:40:32.8924853Z > Task :wrapper
-2025-06-26T08:40:32.9912493Z 
-2025-06-26T08:40:32.9988998Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
-2025-06-26T08:40:32.9990333Z 
-2025-06-26T08:40:32.9990783Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-2025-06-26T08:40:32.9991352Z 
-2025-06-26T08:40:32.9992027Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-2025-06-26T08:40:32.9992871Z 
-2025-06-26T08:40:32.9993684Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-2025-06-26T08:40:32.9994974Z 
-2025-06-26T08:40:32.9995123Z BUILD SUCCESSFUL in 1m 16s
-2025-06-26T08:40:32.9995493Z 1 actionable task: 1 executed
-2025-06-26T08:40:33.3546762Z ##[group]Run ./gradlew assembleDebug
-2025-06-26T08:40:33.3547084Z [36;1m./gradlew assembleDebug[0m
-2025-06-26T08:40:33.3597407Z shell: /usr/bin/bash -e {0}
-2025-06-26T08:40:33.3597627Z env:
-2025-06-26T08:40:33.3597902Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T08:40:33.3598403Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
-2025-06-26T08:40:33.3598757Z ##[endgroup]
-2025-06-26T08:40:33.4388581Z Downloading https://services.gradle.org/distributions/gradle-8.14.1-bin.zip
-2025-06-26T08:40:35.3375483Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
-2025-06-26T08:40:37.7887042Z > Task :app:preBuild UP-TO-DATE
-2025-06-26T08:40:37.7888000Z > Task :app:preDebugBuild UP-TO-DATE
-2025-06-26T08:40:37.7888678Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
-2025-06-26T08:40:37.7889936Z > Task :app:checkKotlinGradlePluginConfigurationErrors
-2025-06-26T08:41:07.7881332Z > Task :app:checkDebugAarMetadata
-2025-06-26T08:41:09.7905009Z > Task :app:generateDebugResValues
-2025-06-26T08:41:09.9875188Z > Task :app:mapDebugSourceSetPaths
-2025-06-26T08:41:09.9890025Z > Task :app:generateDebugResources
-2025-06-26T08:41:11.0868414Z > Task :app:packageDebugResources
-2025-06-26T08:41:11.2866914Z 
-2025-06-26T08:41:11.2867924Z > Task :app:mergeDebugResources
-2025-06-26T08:41:11.2878865Z /home/runner/.gradle/caches/8.14.1/transforms/a65f1ca4a8f8759ba56e9b28565214f3/transformed/jetified-lib-aaf-res-6.25.15/res/values/values.xml:116:4: Multiple substitutions specified in non-positional format of string resource string/com_bihe0832_permission_default_content. Did you mean to add the formatted="false" attribute?
-2025-06-26T08:41:12.1910243Z 
-2025-06-26T08:41:12.1911427Z > Task :app:createDebugCompatibleScreenManifests
-2025-06-26T08:41:12.1960331Z > Task :app:extractDeepLinksDebug
-2025-06-26T08:41:12.2868706Z > Task :app:parseDebugLocalResources
-2025-06-26T08:41:12.4874191Z 
-2025-06-26T08:41:12.4916017Z > Task :app:processDebugMainManifest
-2025-06-26T08:41:12.4924758Z package="com.example.app" found in source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
-2025-06-26T08:41:12.4926360Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-2025-06-26T08:41:12.4928066Z Recommendation: remove package="com.example.app" from the source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
-2025-06-26T08:41:12.5875239Z 
-2025-06-26T08:41:12.5875671Z > Task :app:processDebugManifest
-2025-06-26T08:41:12.5876196Z > Task :app:processDebugManifestForPackage
-2025-06-26T08:41:12.5876704Z > Task :app:javaPreCompileDebug
-2025-06-26T08:41:14.1867798Z > Task :app:mergeDebugShaders
-2025-06-26T08:41:14.1868617Z > Task :app:compileDebugShaders NO-SOURCE
-2025-06-26T08:41:14.1874145Z > Task :app:generateDebugAssets UP-TO-DATE
-2025-06-26T08:41:14.3930779Z > Task :app:mergeDebugAssets
-2025-06-26T08:41:14.4893677Z > Task :app:compressDebugAssets
-2025-06-26T08:41:14.9868330Z > Task :app:processDebugResources
-2025-06-26T08:41:15.8897727Z > Task :app:compileDebugKotlin NO-SOURCE
-2025-06-26T08:41:15.8898627Z > Task :app:checkDebugDuplicateClasses
-2025-06-26T08:41:17.8866748Z 
-2025-06-26T08:41:17.8919971Z /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:24: error: package com.bihe0832.android.lib.sherpa does not exist
-2025-06-26T08:41:17.8921401Z > Task :app:compileDebugJavaWithJavac
-2025-06-26T08:41:17.8921953Z import com.bihe0832.android.lib.sherpa.OnnxAsr;
-2025-06-26T08:41:17.8922433Z                                       ^
-2025-06-26T08:41:17.8924390Z /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:25: error: package com.bihe0832.android.lib.sherpa does not exist
-2025-06-26T08:41:17.8925936Z import com.bihe0832.android.lib.sherpa.OnnxTts;
-2025-06-26T08:41:17.8926430Z                                       ^
-2025-06-26T08:41:17.8927551Z /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:50: error: cannot find symbol
-2025-06-26T08:41:17.8928783Z   private OnnxAsr asr;
-2025-06-26T08:41:17.8929097Z           ^
-2025-06-26T08:41:17.8934530Z   symbol:   class OnnxAsr
-2025-06-26T08:41:17.8934969Z   location: class MainActivity
-2025-06-26T08:41:17.8936059Z /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:51: error: cannot find symbol
-2025-06-26T08:41:17.8937106Z   private OnnxTts tts;
-2025-06-26T08:41:17.8937432Z           ^
-2025-06-26T08:41:17.8937717Z   symbol:   class OnnxTts
-2025-06-26T08:41:17.8938093Z   location: class MainActivity
-2025-06-26T08:41:17.8939148Z /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:95: error: cannot find symbol
-2025-06-26T08:41:17.8940436Z         asr = new OnnxAsr(getFilesDir() + "/ggml-tiny.bin");
-2025-06-26T08:41:17.8940909Z                   ^
-2025-06-26T08:41:17.8941226Z   symbol:   class OnnxAsr
-2025-06-26T08:41:17.8941595Z   location: class MainActivity
-2025-06-26T08:41:17.8942649Z /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:104: error: cannot find symbol
-2025-06-26T08:41:17.8944107Z         tts = new OnnxTts(getFilesDir() + "/en_US-lessac-medium.onnx", getFilesDir() + "/en_US-lessac-medium.json");
-2025-06-26T08:41:17.8944806Z                   ^
-2025-06-26T08:41:17.8945099Z   symbol:   class OnnxTts
-2025-06-26T08:41:17.8945455Z   location: class MainActivity
-2025-06-26T08:41:17.8946590Z Note: /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java uses or overrides a deprecated API.
-2025-06-26T08:41:17.8947875Z Note: Recompile with -Xlint:deprecation for details.
-2025-06-26T08:41:17.8948318Z 6 errors
-2025-06-26T08:41:17.9873531Z 
-2025-06-26T08:41:17.9873557Z 
-2025-06-26T08:41:17.9874459Z FAILURE: Build failed with an exception.
-2025-06-26T08:41:17.9875011Z > Task :app:compileDebugJavaWithJavac FAILED
-2025-06-26T08:41:17.9875638Z 
-2025-06-26T08:41:17.9875645Z 
-2025-06-26T08:41:17.9876052Z * What went wrong:
-2025-06-26T08:41:17.9893871Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
-2025-06-26T08:41:17.9894925Z 
-2025-06-26T08:41:17.9895382Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-2025-06-26T08:41:17.9895959Z 
-2025-06-26T08:41:17.9896589Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-2025-06-26T08:41:17.9897366Z 
-2025-06-26T08:41:17.9898109Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-2025-06-26T08:41:17.9899112Z 20 actionable tasks: 20 executed
-2025-06-26T08:41:17.9899870Z Execution failed for task ':app:compileDebugJavaWithJavac'.
-2025-06-26T08:41:17.9900470Z > Compilation failed; see the compiler output below.
-2025-06-26T08:41:17.9901657Z   Note: /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java uses or overrides a deprecated API.
-2025-06-26T08:41:17.9902881Z   Note: Recompile with -Xlint:deprecation for details.
-2025-06-26T08:41:17.9904019Z   /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:50: error: cannot find symbol
-2025-06-26T08:41:17.9905456Z     private OnnxAsr asr;
-2025-06-26T08:41:17.9905765Z             ^
-2025-06-26T08:41:17.9906037Z     symbol:   class OnnxAsr
-2025-06-26T08:41:17.9906396Z     location: class MainActivity
-2025-06-26T08:41:17.9907683Z   /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:51: error: cannot find symbol
-2025-06-26T08:41:17.9908753Z     private OnnxTts tts;
-2025-06-26T08:41:17.9909059Z             ^
-2025-06-26T08:41:17.9909328Z     symbol:   class OnnxTts
-2025-06-26T08:41:17.9909963Z     location: class MainActivity
-2025-06-26T08:41:17.9910993Z   /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:95: error: cannot find symbol
-2025-06-26T08:41:17.9912111Z           asr = new OnnxAsr(getFilesDir() + "/ggml-tiny.bin");
-2025-06-26T08:41:17.9912545Z                     ^
-2025-06-26T08:41:17.9912851Z     symbol:   class OnnxAsr
-2025-06-26T08:41:17.9913193Z     location: class MainActivity
-2025-06-26T08:41:17.9914220Z   /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:104: error: cannot find symbol
-2025-06-26T08:41:17.9915645Z           tts = new OnnxTts(getFilesDir() + "/en_US-lessac-medium.onnx", getFilesDir() + "/en_US-lessac-medium.json");
-2025-06-26T08:41:17.9916336Z                     ^
-2025-06-26T08:41:17.9916626Z     symbol:   class OnnxTts
-2025-06-26T08:41:17.9916953Z     location: class MainActivity
-2025-06-26T08:41:17.9918175Z   /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:24: error: package com.bihe0832.android.lib.sherpa does not exist
-2025-06-26T08:41:17.9919744Z   import com.bihe0832.android.lib.sherpa.OnnxAsr;
-2025-06-26T08:41:17.9920209Z                                         ^
-2025-06-26T08:41:17.9921522Z   /home/runner/work/android-github-build/android-github-build/app/src/main/java/com/example/app/MainActivity.java:25: error: package com.bihe0832.android.lib.sherpa does not exist
-2025-06-26T08:41:17.9922912Z   import com.bihe0832.android.lib.sherpa.OnnxTts;
-2025-06-26T08:41:17.9923374Z                                         ^
-2025-06-26T08:41:17.9923749Z   6 errors
-2025-06-26T08:41:17.9923909Z 
-2025-06-26T08:41:17.9924008Z * Try:
-2025-06-26T08:41:17.9924430Z > Check your code and dependencies to fix the compilation error(s)
-2025-06-26T08:41:17.9924978Z > Run with --scan to get full insights.
-2025-06-26T08:41:17.9925274Z 
-2025-06-26T08:41:17.9925392Z BUILD FAILED in 44s
-2025-06-26T08:41:18.0662965Z ##[error]Process completed with exit code 1.
-2025-06-26T08:41:18.0806642Z Post job cleanup.
-2025-06-26T08:41:18.3216124Z Post job cleanup.
-2025-06-26T08:41:18.4134676Z [command]/usr/bin/git version
-2025-06-26T08:41:18.4170297Z git version 2.49.0
-2025-06-26T08:41:18.4223508Z Temporarily overriding HOME='/home/runner/work/_temp/a694f28b-ba7b-426f-b169-cff7594c7fb6' before making global git config changes
-2025-06-26T08:41:18.4224751Z Adding repository directory to the temporary git global config as a safe directory
-2025-06-26T08:41:18.4232125Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
-2025-06-26T08:41:18.4276430Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-06-26T08:41:18.4313131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-06-26T08:41:18.4552092Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-06-26T08:41:18.4574581Z http.https://github.com/.extraheader
-2025-06-26T08:41:18.4587744Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-06-26T08:41:18.4620992Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-06-26T08:41:18.4973069Z Cleaning up orphan processes
-2025-06-26T08:41:18.5236881Z Terminate orphan process: pid (2235) (java)
+﻿2025-06-26T12:06:00.2392698Z Current runner version: '2.325.0'
+2025-06-26T12:06:00.2430144Z ##[group]Runner Image Provisioner
+2025-06-26T12:06:00.2431128Z Hosted Compute Agent
+2025-06-26T12:06:00.2431663Z Version: 20250620.352
+2025-06-26T12:06:00.2432249Z Commit: f262f3aba23b10ea191b2a62bdee1ca4c3d344da
+2025-06-26T12:06:00.2432992Z Build Date: 2025-06-20T19:27:17Z
+2025-06-26T12:06:00.2433896Z ##[endgroup]
+2025-06-26T12:06:00.2434431Z ##[group]Operating System
+2025-06-26T12:06:00.2435106Z Ubuntu
+2025-06-26T12:06:00.2435606Z 24.04.2
+2025-06-26T12:06:00.2436080Z LTS
+2025-06-26T12:06:00.2436604Z ##[endgroup]
+2025-06-26T12:06:00.2437070Z ##[group]Runner Image
+2025-06-26T12:06:00.2437664Z Image: ubuntu-24.04
+2025-06-26T12:06:00.2438179Z Version: 20250602.3.0
+2025-06-26T12:06:00.2439197Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-26T12:06:00.2440686Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-26T12:06:00.2441703Z ##[endgroup]
+2025-06-26T12:06:00.2442744Z ##[group]GITHUB_TOKEN Permissions
+2025-06-26T12:06:00.2445323Z Contents: write
+2025-06-26T12:06:00.2445894Z Metadata: read
+2025-06-26T12:06:00.2446342Z ##[endgroup]
+2025-06-26T12:06:00.2448898Z Secret source: Actions
+2025-06-26T12:06:00.2449941Z Prepare workflow directory
+2025-06-26T12:06:00.2882020Z Prepare all required actions
+2025-06-26T12:06:00.2939038Z Getting action download info
+2025-06-26T12:06:00.6251847Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-26T12:06:00.6252925Z Version: 4.2.2
+2025-06-26T12:06:00.6254213Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-26T12:06:00.6255344Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-26T12:06:00.6256163Z ##[endgroup]
+2025-06-26T12:06:00.7024808Z ##[group]Download immutable action package 'actions/setup-java@v4'
+2025-06-26T12:06:00.7025573Z Version: 4.7.1
+2025-06-26T12:06:00.7026397Z Digest: sha256:23223d64943473efb4336f60463c0429cd4f422cd5fc6c48a5cf0d5907c1aeac
+2025-06-26T12:06:00.7027374Z Source commit SHA: c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+2025-06-26T12:06:00.7028073Z ##[endgroup]
+2025-06-26T12:06:00.9902742Z Download action repository 'softprops/action-gh-release@v2' (SHA:72f2c25fcb47643c292f7107632f7a47c1df5cd8)
+2025-06-26T12:06:01.3820543Z Complete job name: build
+2025-06-26T12:06:01.4510623Z ##[group]Run actions/checkout@v4
+2025-06-26T12:06:01.4511538Z with:
+2025-06-26T12:06:01.4512032Z   repository: HansPeterRadtke/android-github-build
+2025-06-26T12:06:01.4512835Z   token: ***
+2025-06-26T12:06:01.4513485Z   ssh-strict: true
+2025-06-26T12:06:01.4513910Z   ssh-user: git
+2025-06-26T12:06:01.4514334Z   persist-credentials: true
+2025-06-26T12:06:01.4514800Z   clean: true
+2025-06-26T12:06:01.4515230Z   sparse-checkout-cone-mode: true
+2025-06-26T12:06:01.4515729Z   fetch-depth: 1
+2025-06-26T12:06:01.4516157Z   fetch-tags: false
+2025-06-26T12:06:01.4516566Z   show-progress: true
+2025-06-26T12:06:01.4516989Z   lfs: false
+2025-06-26T12:06:01.4517419Z   submodules: false
+2025-06-26T12:06:01.4517850Z   set-safe-directory: true
+2025-06-26T12:06:01.4518603Z ##[endgroup]
+2025-06-26T12:06:01.5638149Z Syncing repository: HansPeterRadtke/android-github-build
+2025-06-26T12:06:01.5640140Z ##[group]Getting Git version info
+2025-06-26T12:06:01.5641102Z Working directory is '/home/runner/work/android-github-build/android-github-build'
+2025-06-26T12:06:01.5642524Z [command]/usr/bin/git version
+2025-06-26T12:06:01.5671625Z git version 2.49.0
+2025-06-26T12:06:01.5698883Z ##[endgroup]
+2025-06-26T12:06:01.5715079Z Temporarily overriding HOME='/home/runner/work/_temp/d8fd99f8-1b7c-4c3e-ac2c-9fbfd7301d92' before making global git config changes
+2025-06-26T12:06:01.5717783Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-26T12:06:01.5731776Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
+2025-06-26T12:06:01.5767725Z Deleting the contents of '/home/runner/work/android-github-build/android-github-build'
+2025-06-26T12:06:01.5771085Z ##[group]Initializing the repository
+2025-06-26T12:06:01.5776555Z [command]/usr/bin/git init /home/runner/work/android-github-build/android-github-build
+2025-06-26T12:06:01.5830488Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-26T12:06:01.5832532Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-26T12:06:01.5834641Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-26T12:06:01.5836080Z hint:
+2025-06-26T12:06:01.5836706Z hint: 	git config --global init.defaultBranch <name>
+2025-06-26T12:06:01.5837396Z hint:
+2025-06-26T12:06:01.5838037Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-26T12:06:01.5839115Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-26T12:06:01.5839995Z hint:
+2025-06-26T12:06:01.5840678Z hint: 	git branch -m <name>
+2025-06-26T12:06:01.5841871Z Initialized empty Git repository in /home/runner/work/android-github-build/android-github-build/.git/
+2025-06-26T12:06:01.5846672Z [command]/usr/bin/git remote add origin https://github.com/HansPeterRadtke/android-github-build
+2025-06-26T12:06:01.5876551Z ##[endgroup]
+2025-06-26T12:06:01.5877340Z ##[group]Disabling automatic garbage collection
+2025-06-26T12:06:01.5880276Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-26T12:06:01.5908683Z ##[endgroup]
+2025-06-26T12:06:01.5909804Z ##[group]Setting up auth
+2025-06-26T12:06:01.5915027Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-26T12:06:01.5945374Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-26T12:06:01.6255027Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-26T12:06:01.6287013Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-26T12:06:01.6508505Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-26T12:06:01.6544079Z ##[endgroup]
+2025-06-26T12:06:01.6545041Z ##[group]Fetching the repository
+2025-06-26T12:06:01.6561206Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6c0b46176aab90000cc923b0dc215725d0f5e8ff:refs/tags/v1.1.2
+2025-06-26T12:06:02.6938458Z From https://github.com/HansPeterRadtke/android-github-build
+2025-06-26T12:06:02.6942307Z  * [new ref]         6c0b46176aab90000cc923b0dc215725d0f5e8ff -> v1.1.2
+2025-06-26T12:06:02.6969474Z ##[endgroup]
+2025-06-26T12:06:02.6971345Z ##[group]Determining the checkout info
+2025-06-26T12:06:02.6976266Z ##[endgroup]
+2025-06-26T12:06:02.6977617Z [command]/usr/bin/git sparse-checkout disable
+2025-06-26T12:06:02.7018904Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-26T12:06:02.7052274Z ##[group]Checking out the ref
+2025-06-26T12:06:02.7054682Z [command]/usr/bin/git checkout --progress --force refs/tags/v1.1.2
+2025-06-26T12:06:02.8007297Z Note: switching to 'refs/tags/v1.1.2'.
+2025-06-26T12:06:02.8008598Z 
+2025-06-26T12:06:02.8009735Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-06-26T12:06:02.8012758Z changes and commit them, and you can discard any commits you make in this
+2025-06-26T12:06:02.8016224Z state without impacting any branches by switching back to a branch.
+2025-06-26T12:06:02.8017981Z 
+2025-06-26T12:06:02.8019078Z If you want to create a new branch to retain commits you create, you may
+2025-06-26T12:06:02.8021781Z do so (now or later) by using -c with the switch command. Example:
+2025-06-26T12:06:02.8023696Z 
+2025-06-26T12:06:02.8024354Z   git switch -c <new-branch-name>
+2025-06-26T12:06:02.8025897Z 
+2025-06-26T12:06:02.8026498Z Or undo this operation with:
+2025-06-26T12:06:02.8027598Z 
+2025-06-26T12:06:02.8028194Z   git switch -
+2025-06-26T12:06:02.8029039Z 
+2025-06-26T12:06:02.8030445Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-06-26T12:06:02.8032539Z 
+2025-06-26T12:06:02.8033545Z HEAD is now at 6c0b461 Bump version to 1.1.2
+2025-06-26T12:06:02.8038680Z ##[endgroup]
+2025-06-26T12:06:02.8057657Z [command]/usr/bin/git log -1 --format=%H
+2025-06-26T12:06:02.8080181Z 6c0b46176aab90000cc923b0dc215725d0f5e8ff
+2025-06-26T12:06:02.8424028Z ##[group]Run actions/setup-java@v4
+2025-06-26T12:06:02.8425117Z with:
+2025-06-26T12:06:02.8425895Z   distribution: temurin
+2025-06-26T12:06:02.8426796Z   java-version: 17
+2025-06-26T12:06:02.8427632Z   java-package: jdk
+2025-06-26T12:06:02.8428477Z   check-latest: false
+2025-06-26T12:06:02.8429336Z   server-id: github
+2025-06-26T12:06:02.8430178Z   server-username: GITHUB_ACTOR
+2025-06-26T12:06:02.8431205Z   server-password: GITHUB_TOKEN
+2025-06-26T12:06:02.8432194Z   overwrite-settings: true
+2025-06-26T12:06:02.8433384Z   job-status: success
+2025-06-26T12:06:02.8434598Z   token: ***
+2025-06-26T12:06:02.8435379Z ##[endgroup]
+2025-06-26T12:06:03.0455771Z ##[group]Installed distributions
+2025-06-26T12:06:03.0509340Z Resolved Java 17.0.15+6 from tool-cache
+2025-06-26T12:06:03.0511202Z Setting Java 17.0.15+6 as the default
+2025-06-26T12:06:03.0524485Z Creating toolchains.xml for JDK version 17 from temurin
+2025-06-26T12:06:03.0602821Z Writing to /home/runner/.m2/toolchains.xml
+2025-06-26T12:06:03.0604432Z 
+2025-06-26T12:06:03.0604982Z Java configuration:
+2025-06-26T12:06:03.0606321Z   Distribution: temurin
+2025-06-26T12:06:03.0607732Z   Version: 17.0.15+6
+2025-06-26T12:06:03.0609898Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:03.0611659Z 
+2025-06-26T12:06:03.0613320Z ##[endgroup]
+2025-06-26T12:06:03.0631345Z Creating settings.xml with server-id: github
+2025-06-26T12:06:03.0632646Z Writing to /home/runner/.m2/settings.xml
+2025-06-26T12:06:03.0774396Z ##[group]Run gradle wrapper
+2025-06-26T12:06:03.0775498Z [36;1mgradle wrapper[0m
+2025-06-26T12:06:03.0776404Z [36;1mchmod +x ./gradlew[0m
+2025-06-26T12:06:03.0847269Z shell: /usr/bin/bash -e {0}
+2025-06-26T12:06:03.0848203Z env:
+2025-06-26T12:06:03.0849327Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:03.0851249Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:03.0852737Z ##[endgroup]
+2025-06-26T12:06:06.2494484Z 
+2025-06-26T12:06:06.2495497Z Welcome to Gradle 8.14.1!
+2025-06-26T12:06:06.2496162Z 
+2025-06-26T12:06:06.2497804Z Here are the highlights of this release:
+2025-06-26T12:06:06.2498740Z  - Java 24 support
+2025-06-26T12:06:06.2505156Z  - GraalVM Native Image toolchain selection
+2025-06-26T12:06:06.2505812Z  - Enhancements to test reporting
+2025-06-26T12:06:06.2506342Z  - Build Authoring improvements
+2025-06-26T12:06:06.2506635Z 
+2025-06-26T12:06:06.2507040Z For more details see https://docs.gradle.org/8.14.1/release-notes.html
+2025-06-26T12:06:06.2507490Z 
+2025-06-26T12:06:06.7465902Z Starting a Gradle Daemon (subsequent builds will be faster)
+2025-06-26T12:06:54.7484935Z > Task :wrapper
+2025-06-26T12:06:54.8464682Z 
+2025-06-26T12:06:54.8477211Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
+2025-06-26T12:06:54.8481633Z 
+2025-06-26T12:06:54.8500339Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2025-06-26T12:06:54.8507830Z 
+2025-06-26T12:06:54.8509637Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2025-06-26T12:06:54.8513915Z 
+2025-06-26T12:06:54.8518894Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2025-06-26T12:06:54.8528250Z 
+2025-06-26T12:06:54.8531684Z BUILD SUCCESSFUL in 51s
+2025-06-26T12:06:54.8537457Z 1 actionable task: 1 executed
+2025-06-26T12:06:55.2095280Z ##[group]Run ./gradlew assembleDebug
+2025-06-26T12:06:55.2095617Z [36;1m./gradlew assembleDebug[0m
+2025-06-26T12:06:55.2146601Z shell: /usr/bin/bash -e {0}
+2025-06-26T12:06:55.2146869Z env:
+2025-06-26T12:06:55.2147179Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:55.2147733Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:55.2148141Z ##[endgroup]
+2025-06-26T12:06:55.2950838Z Downloading https://services.gradle.org/distributions/gradle-8.14.1-bin.zip
+2025-06-26T12:06:56.7229607Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2025-06-26T12:06:59.3914306Z > Task :app:preBuild UP-TO-DATE
+2025-06-26T12:06:59.3933397Z > Task :app:preDebugBuild UP-TO-DATE
+2025-06-26T12:06:59.3944796Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+2025-06-26T12:06:59.3945578Z > Task :app:checkKotlinGradlePluginConfigurationErrors
+2025-06-26T12:07:05.9876365Z > Task :app:generateDebugResValues
+2025-06-26T12:07:05.9876890Z > Task :app:checkDebugAarMetadata
+2025-06-26T12:07:05.9877423Z > Task :app:mapDebugSourceSetPaths
+2025-06-26T12:07:05.9877835Z > Task :app:generateDebugResources
+2025-06-26T12:07:06.6872797Z > Task :app:packageDebugResources
+2025-06-26T12:07:07.1866349Z > Task :app:mergeDebugResources
+2025-06-26T12:07:08.5935828Z > Task :app:createDebugCompatibleScreenManifests
+2025-06-26T12:07:08.5946317Z > Task :app:extractDeepLinksDebug
+2025-06-26T12:07:08.6867419Z > Task :app:parseDebugLocalResources
+2025-06-26T12:07:08.7881267Z 
+2025-06-26T12:07:08.7941487Z > Task :app:processDebugMainManifest
+2025-06-26T12:07:08.7953664Z package="com.example.app" found in source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
+2025-06-26T12:07:08.7955801Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+2025-06-26T12:07:08.7957711Z Recommendation: remove package="com.example.app" from the source AndroidManifest.xml: /home/runner/work/android-github-build/android-github-build/app/src/main/AndroidManifest.xml.
+2025-06-26T12:07:08.8877491Z 
+2025-06-26T12:07:08.8881867Z > Task :app:processDebugManifest
+2025-06-26T12:07:08.9885973Z > Task :app:javaPreCompileDebug
+2025-06-26T12:07:08.9896825Z > Task :app:mergeDebugShaders
+2025-06-26T12:07:08.9936195Z > Task :app:compileDebugShaders NO-SOURCE
+2025-06-26T12:07:08.9940036Z > Task :app:generateDebugAssets UP-TO-DATE
+2025-06-26T12:07:09.0875846Z > Task :app:mergeDebugAssets
+2025-06-26T12:07:09.7866870Z > Task :app:compressDebugAssets
+2025-06-26T12:07:10.1867919Z > Task :app:desugarDebugFileDependencies
+2025-06-26T12:07:10.1871717Z > Task :app:mergeDebugStartupProfile
+2025-06-26T12:07:10.1875435Z > Task :app:checkDebugDuplicateClasses
+2025-06-26T12:07:10.1876084Z > Task :app:mergeDebugJniLibFolders
+2025-06-26T12:07:27.8888213Z > Task :app:mergeLibDexDebug
+2025-06-26T12:07:28.2886934Z > Task :app:mergeDebugNativeLibs
+2025-06-26T12:07:29.8866009Z > Task :app:validateSigningDebug
+2025-06-26T12:07:29.8866745Z > Task :app:processDebugManifestForPackage
+2025-06-26T12:07:30.2866662Z > Task :app:mergeExtDexDebug
+2025-06-26T12:07:30.8881058Z > Task :app:writeDebugAppMetadata
+2025-06-26T12:07:30.8885854Z > Task :app:writeDebugSigningConfigVersions
+2025-06-26T12:07:31.1865229Z 
+2025-06-26T12:07:31.1870564Z > Task :app:stripDebugDebugSymbols
+2025-06-26T12:07:31.1880124Z Unable to strip the following libraries, packaging them as they are: libonnxruntime.so, libsherpa-onnx-jni.so.
+2025-06-26T12:07:31.2872654Z 
+2025-06-26T12:07:31.2876956Z > Task :app:processDebugResources
+2025-06-26T12:07:34.5876427Z 
+2025-06-26T12:07:34.5876934Z > Task :app:compileDebugKotlin FAILED
+2025-06-26T12:07:34.5885126Z FAILURE: Build failed with an exception.
+2025-06-26T12:07:34.5885484Z 
+2025-06-26T12:07:34.5887102Z 
+2025-06-26T12:07:34.5888440Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
+2025-06-26T12:07:34.5914564Z * What went wrong:
+2025-06-26T12:07:34.5924112Z Execution failed for task ':app:compileDebugKotlin'.
+2025-06-26T12:07:34.5924538Z 
+2025-06-26T12:07:34.5925655Z > Inconsistent JVM-target compatibility detected for tasks 'compileDebugJavaWithJavac' (1.8) and 'compileDebugKotlin' (17).
+2025-06-26T12:07:34.5926823Z   
+2025-06-26T12:07:34.5927508Z   Consider using JVM Toolchain: https://kotl.in/gradle/jvm/toolchain
+2025-06-26T12:07:34.5929065Z   Learn more about JVM-target validation: https://kotl.in/gradle/jvm/target-validation 
+2025-06-26T12:07:34.5929695Z 
+2025-06-26T12:07:34.5929828Z * Try:
+2025-06-26T12:07:34.5930222Z > Run with --stacktrace option to get the stack trace.
+2025-06-26T12:07:34.5930866Z > Run with --info or --debug option to get more log output.
+2025-06-26T12:07:34.5931423Z > Run with --scan to get full insights.
+2025-06-26T12:07:34.5931943Z > Get more help at https://help.gradle.org.
+2025-06-26T12:07:34.5934435Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2025-06-26T12:07:34.5935003Z 
+2025-06-26T12:07:34.5936966Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2025-06-26T12:07:34.5939045Z 
+2025-06-26T12:07:34.5948826Z 
+2025-06-26T12:07:34.5949034Z BUILD FAILED in 39s
+2025-06-26T12:07:34.5950072Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2025-06-26T12:07:34.5951130Z 30 actionable tasks: 30 executed
+2025-06-26T12:07:34.7269291Z ##[error]Process completed with exit code 1.
+2025-06-26T12:07:34.7375990Z Post job cleanup.
+2025-06-26T12:07:34.9215200Z Post job cleanup.
+2025-06-26T12:07:35.0198189Z [command]/usr/bin/git version
+2025-06-26T12:07:35.0236158Z git version 2.49.0
+2025-06-26T12:07:35.0283017Z Temporarily overriding HOME='/home/runner/work/_temp/3f29d65a-37ae-46c2-ad06-ebbcf5936a48' before making global git config changes
+2025-06-26T12:07:35.0284493Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-26T12:07:35.0290225Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
+2025-06-26T12:07:35.0331075Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-26T12:07:35.0369293Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-26T12:07:35.0607695Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-26T12:07:35.0631002Z http.https://github.com/.extraheader
+2025-06-26T12:07:35.0644530Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-26T12:07:35.0680535Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-26T12:07:35.1024436Z Cleaning up orphan processes
+2025-06-26T12:07:35.1289718Z Terminate orphan process: pid (2109) (java)

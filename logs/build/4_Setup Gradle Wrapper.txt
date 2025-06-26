@@ -1,0 +1,32 @@
+﻿2025-06-26T12:06:03.0774363Z ##[group]Run gradle wrapper
+2025-06-26T12:06:03.0775491Z [36;1mgradle wrapper[0m
+2025-06-26T12:06:03.0776400Z [36;1mchmod +x ./gradlew[0m
+2025-06-26T12:06:03.0847255Z shell: /usr/bin/bash -e {0}
+2025-06-26T12:06:03.0848199Z env:
+2025-06-26T12:06:03.0849322Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:03.0851245Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-26T12:06:03.0852733Z ##[endgroup]
+2025-06-26T12:06:06.2494425Z 
+2025-06-26T12:06:06.2495486Z Welcome to Gradle 8.14.1!
+2025-06-26T12:06:06.2496155Z 
+2025-06-26T12:06:06.2497793Z Here are the highlights of this release:
+2025-06-26T12:06:06.2498733Z  - Java 24 support
+2025-06-26T12:06:06.2505143Z  - GraalVM Native Image toolchain selection
+2025-06-26T12:06:06.2505805Z  - Enhancements to test reporting
+2025-06-26T12:06:06.2506335Z  - Build Authoring improvements
+2025-06-26T12:06:06.2506629Z 
+2025-06-26T12:06:06.2506965Z For more details see https://docs.gradle.org/8.14.1/release-notes.html
+2025-06-26T12:06:06.2507486Z 
+2025-06-26T12:06:06.7465847Z Starting a Gradle Daemon (subsequent builds will be faster)
+2025-06-26T12:06:54.7484889Z > Task :wrapper
+2025-06-26T12:06:54.8464632Z 
+2025-06-26T12:06:54.8477187Z [Incubating] Problems report is available at: file:///home/runner/work/android-github-build/android-github-build/build/reports/problems/problems-report.html
+2025-06-26T12:06:54.8481626Z 
+2025-06-26T12:06:54.8500325Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2025-06-26T12:06:54.8507817Z 
+2025-06-26T12:06:54.8509631Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2025-06-26T12:06:54.8513909Z 
+2025-06-26T12:06:54.8518882Z For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2025-06-26T12:06:54.8528218Z 
+2025-06-26T12:06:54.8531678Z BUILD SUCCESSFUL in 51s
+2025-06-26T12:06:54.8537447Z 1 actionable task: 1 executed
