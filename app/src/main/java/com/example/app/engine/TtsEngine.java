@@ -6,6 +6,7 @@ import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtSession;
 import ai.onnxruntime.OnnxTensor;
 
+import java.nio.FloatBuffer;
 import java.util.Collections;
 
 public class TtsEngine {
@@ -30,7 +31,8 @@ public class TtsEngine {
     try {
       float[] dummyInput = new float[80];
       for (int i = 0; i < dummyInput.length; i++) dummyInput[i] = i;
-      OnnxTensor input = OnnxTensor.createTensor(env, dummyInput);
+      long[] shape = new long[]{1, dummyInput.length};
+      OnnxTensor input = OnnxTensor.createTensor(env, FloatBuffer.wrap(dummyInput), shape);
       OrtSession.Result result = session.run(Collections.singletonMap("input", input));
       float[] audio = (float[]) result.get(0).getValue();
       short[] pcm = new short[audio.length];

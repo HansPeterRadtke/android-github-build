@@ -6,6 +6,7 @@ import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtSession;
 import ai.onnxruntime.OnnxTensor;
 
+import java.nio.FloatBuffer;
 import java.util.Collections;
 
 public class Any {
@@ -27,7 +28,7 @@ public class Any {
   public String transcribe(float[] audioData) {
     try {
       long[] shape = new long[]{1, audioData.length};
-      OnnxTensor input = OnnxTensor.createTensor(env, audioData, shape);
+      OnnxTensor input = OnnxTensor.createTensor(env, FloatBuffer.wrap(audioData), shape);
       OrtSession.Result result = session.run(Collections.singletonMap("input", input));
       String output = result.get(0).getValue().toString();
       result.close();
