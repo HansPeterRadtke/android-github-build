@@ -21,8 +21,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.bihe0832.android.lib.sherpa.OnnxAsr;
-import com.bihe0832.android.lib.sherpa.OnnxTts;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -47,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
   private ByteArrayOutputStream recordedStream;
   private EditText textOutput;
 
-  private OnnxAsr asr;
-  private OnnxTts tts;
+  private Any asr;
+  private TtsEngine tts;
 
   private static final String[] MODEL_URLS = {
     "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx",
@@ -92,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     toTextBtn.setOnClickListener(v -> {
       if (recordedStream == null) return;
       if (asr == null) {
-        asr = new OnnxAsr(getFilesDir() + "/ggml-tiny.bin");
+        asr = new Any(getFilesDir() + "/ggml-tiny.bin");
       }
       float[] audioFloat = bytesToFloatArray(recordedStream.toByteArray());
       String text = asr.transcribe(audioFloat);
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     readTextBtn.setOnClickListener(v -> {
       if (tts == null) {
-        tts = new OnnxTts(getFilesDir() + "/en_US-lessac-medium.onnx", getFilesDir() + "/en_US-lessac-medium.json");
+        tts = new TtsEngine(getFilesDir() + "/en_US-lessac-medium.onnx", getFilesDir() + "/en_US-lessac-medium.json");
       }
       String text = textOutput.getText().toString();
       short[] pcm = tts.synthesize(text);
