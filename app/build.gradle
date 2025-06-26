@@ -12,7 +12,7 @@ android {
         minSdk 26
         targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
     }
 
     buildTypes {
@@ -24,6 +24,7 @@ android {
 }
 
 dependencies {
+	implementation "com.bihe0832.android:lib-sherpa-onnx:6.25.21"
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.bihe0832.android:lib-sherpa-onnx:6.25.21")
 }
@@ -34,8 +35,6 @@ repositories {
 repositories { mavenCentral() }
 
 dependencies {
+	implementation "com.bihe0832.android:lib-sherpa-onnx:6.25.21"
     implementation "com.bihe0832.android:lib-sherpa-onnx:6.25.21"
-    implementation "com.bihe0832.android:lib-onnx:6.16.7"
-    implementation "com.bihe0832.android:lib-asr-min:6.26.2"
-    implementation "com.bihe0832.android:lib-tts:6.26.2"
 }
