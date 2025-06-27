@@ -1,0 +1,12 @@
+﻿2025-06-27T04:18:45.2908350Z ##[group]Run softprops/action-gh-release@v2
+2025-06-27T04:18:45.2908829Z with:
+2025-06-27T04:18:45.2909157Z   files: app/build/outputs/apk/debug/app-debug.apk
+2025-06-27T04:18:45.2909779Z   token: ***
+2025-06-27T04:18:45.2910044Z env:
+2025-06-27T04:18:45.2910483Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-27T04:18:45.2911529Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-27T04:18:45.2912122Z ##[endgroup]
+2025-06-27T04:18:45.6917211Z 👩‍🏭 Creating new GitHub release for tag v1.2.2...
+2025-06-27T04:18:46.0488357Z ⬆️ Uploading app-debug.apk...
+2025-06-27T04:18:49.3027448Z ✅ Uploaded app-debug.apk
+2025-06-27T04:18:49.3038119Z 🎉 Release ready at https://github.com/HansPeterRadtke/android-github-build/releases/tag/v1.2.2

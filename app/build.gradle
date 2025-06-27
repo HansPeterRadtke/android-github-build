@@ -32,10 +32,15 @@ android {
     packagingOptions {
         pickFirst 'lib/**/libonnxruntime.so'
     }
+    preBuild.dependsOn(':app:scripts:downloadModels')
 }
 
 repositories {
     mavenCentral()
+}
+
+tasks.register("downloadModels", Exec) {
+    commandLine "bash", "app/scripts/download_models.sh"
 }
 
 dependencies {

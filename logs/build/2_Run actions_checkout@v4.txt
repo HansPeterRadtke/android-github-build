@@ -1,83 +1,83 @@
-﻿2025-06-26T14:22:52.0412306Z ##[group]Run actions/checkout@v4
-2025-06-26T14:22:52.0413872Z with:
-2025-06-26T14:22:52.0414728Z   repository: HansPeterRadtke/android-github-build
-2025-06-26T14:22:52.0416129Z   token: ***
-2025-06-26T14:22:52.0416805Z   ssh-strict: true
-2025-06-26T14:22:52.0417494Z   ssh-user: git
-2025-06-26T14:22:52.0418226Z   persist-credentials: true
-2025-06-26T14:22:52.0419040Z   clean: true
-2025-06-26T14:22:52.0419764Z   sparse-checkout-cone-mode: true
-2025-06-26T14:22:52.0420787Z   fetch-depth: 1
-2025-06-26T14:22:52.0421495Z   fetch-tags: false
-2025-06-26T14:22:52.0422203Z   show-progress: true
-2025-06-26T14:22:52.0423060Z   lfs: false
-2025-06-26T14:22:52.0423777Z   submodules: false
-2025-06-26T14:22:52.0424512Z   set-safe-directory: true
-2025-06-26T14:22:52.0425602Z ##[endgroup]
-2025-06-26T14:22:52.1522475Z Syncing repository: HansPeterRadtke/android-github-build
-2025-06-26T14:22:52.1525768Z ##[group]Getting Git version info
-2025-06-26T14:22:52.1527324Z Working directory is '/home/runner/work/android-github-build/android-github-build'
-2025-06-26T14:22:52.1529732Z [command]/usr/bin/git version
-2025-06-26T14:22:52.1549551Z git version 2.49.0
-2025-06-26T14:22:52.1576256Z ##[endgroup]
-2025-06-26T14:22:52.1590618Z Temporarily overriding HOME='/home/runner/work/_temp/be6b1342-314f-4ffa-998b-8be4833b22f5' before making global git config changes
-2025-06-26T14:22:52.1594069Z Adding repository directory to the temporary git global config as a safe directory
-2025-06-26T14:22:52.1603062Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
-2025-06-26T14:22:52.1637719Z Deleting the contents of '/home/runner/work/android-github-build/android-github-build'
-2025-06-26T14:22:52.1640958Z ##[group]Initializing the repository
-2025-06-26T14:22:52.1645505Z [command]/usr/bin/git init /home/runner/work/android-github-build/android-github-build
-2025-06-26T14:22:52.1703880Z hint: Using 'master' as the name for the initial branch. This default branch name
-2025-06-26T14:22:52.1705947Z hint: is subject to change. To configure the initial branch name to use in all
-2025-06-26T14:22:52.1707981Z hint: of your new repositories, which will suppress this warning, call:
-2025-06-26T14:22:52.1710083Z hint:
-2025-06-26T14:22:52.1711391Z hint: 	git config --global init.defaultBranch <name>
-2025-06-26T14:22:52.1712465Z hint:
-2025-06-26T14:22:52.1714189Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2025-06-26T14:22:52.1715927Z hint: 'development'. The just-created branch can be renamed via this command:
-2025-06-26T14:22:52.1717447Z hint:
-2025-06-26T14:22:52.1718352Z hint: 	git branch -m <name>
-2025-06-26T14:22:52.1720141Z Initialized empty Git repository in /home/runner/work/android-github-build/android-github-build/.git/
-2025-06-26T14:22:52.1723864Z [command]/usr/bin/git remote add origin https://github.com/HansPeterRadtke/android-github-build
-2025-06-26T14:22:52.1751665Z ##[endgroup]
-2025-06-26T14:22:52.1753152Z ##[group]Disabling automatic garbage collection
-2025-06-26T14:22:52.1755091Z [command]/usr/bin/git config --local gc.auto 0
-2025-06-26T14:22:52.1785657Z ##[endgroup]
-2025-06-26T14:22:52.1787769Z ##[group]Setting up auth
-2025-06-26T14:22:52.1793938Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-06-26T14:22:52.1826104Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-06-26T14:22:52.2089027Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-06-26T14:22:52.2120910Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-06-26T14:22:52.2336801Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2025-06-26T14:22:52.2370530Z ##[endgroup]
-2025-06-26T14:22:52.2372182Z ##[group]Fetching the repository
-2025-06-26T14:22:52.2379551Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c7ff290c1bc62af5724bdd61361403608bca806c:refs/tags/v1.1.5
-2025-06-26T14:22:52.7861808Z From https://github.com/HansPeterRadtke/android-github-build
-2025-06-26T14:22:52.7863247Z  * [new ref]         c7ff290c1bc62af5724bdd61361403608bca806c -> v1.1.5
-2025-06-26T14:22:52.7886774Z ##[endgroup]
-2025-06-26T14:22:52.7887698Z ##[group]Determining the checkout info
-2025-06-26T14:22:52.7889880Z ##[endgroup]
-2025-06-26T14:22:52.7895903Z [command]/usr/bin/git sparse-checkout disable
-2025-06-26T14:22:52.7935119Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2025-06-26T14:22:52.7963409Z ##[group]Checking out the ref
-2025-06-26T14:22:52.7967551Z [command]/usr/bin/git checkout --progress --force refs/tags/v1.1.5
-2025-06-26T14:22:52.8341874Z Note: switching to 'refs/tags/v1.1.5'.
-2025-06-26T14:22:52.8342676Z 
-2025-06-26T14:22:52.8343291Z You are in 'detached HEAD' state. You can look around, make experimental
-2025-06-26T14:22:52.8344278Z changes and commit them, and you can discard any commits you make in this
-2025-06-26T14:22:52.8345174Z state without impacting any branches by switching back to a branch.
-2025-06-26T14:22:52.8345708Z 
-2025-06-26T14:22:52.8346104Z If you want to create a new branch to retain commits you create, you may
-2025-06-26T14:22:52.8346995Z do so (now or later) by using -c with the switch command. Example:
-2025-06-26T14:22:52.8347480Z 
-2025-06-26T14:22:52.8347717Z   git switch -c <new-branch-name>
-2025-06-26T14:22:52.8348438Z 
-2025-06-26T14:22:52.8348678Z Or undo this operation with:
-2025-06-26T14:22:52.8349025Z 
-2025-06-26T14:22:52.8349230Z   git switch -
-2025-06-26T14:22:52.8349572Z 
-2025-06-26T14:22:52.8350111Z Turn off this advice by setting config variable advice.detachedHead to false
-2025-06-26T14:22:52.8350796Z 
-2025-06-26T14:22:52.8351299Z HEAD is now at c7ff290 Fix TtsEngine unresolved references and validate all links
-2025-06-26T14:22:52.8359849Z ##[endgroup]
-2025-06-26T14:22:52.8397483Z [command]/usr/bin/git log -1 --format=%H
-2025-06-26T14:22:52.8419244Z c7ff290c1bc62af5724bdd61361403608bca806c
+﻿2025-06-27T04:17:18.5158888Z ##[group]Run actions/checkout@v4
+2025-06-27T04:17:18.5159701Z with:
+2025-06-27T04:17:18.5160167Z   repository: HansPeterRadtke/android-github-build
+2025-06-27T04:17:18.5161097Z   token: ***
+2025-06-27T04:17:18.5161487Z   ssh-strict: true
+2025-06-27T04:17:18.5161863Z   ssh-user: git
+2025-06-27T04:17:18.5162259Z   persist-credentials: true
+2025-06-27T04:17:18.5162695Z   clean: true
+2025-06-27T04:17:18.5163081Z   sparse-checkout-cone-mode: true
+2025-06-27T04:17:18.5163555Z   fetch-depth: 1
+2025-06-27T04:17:18.5163930Z   fetch-tags: false
+2025-06-27T04:17:18.5164314Z   show-progress: true
+2025-06-27T04:17:18.5164700Z   lfs: false
+2025-06-27T04:17:18.5165081Z   submodules: false
+2025-06-27T04:17:18.5165467Z   set-safe-directory: true
+2025-06-27T04:17:18.5166158Z ##[endgroup]
+2025-06-27T04:17:18.6254867Z Syncing repository: HansPeterRadtke/android-github-build
+2025-06-27T04:17:18.6256722Z ##[group]Getting Git version info
+2025-06-27T04:17:18.6257535Z Working directory is '/home/runner/work/android-github-build/android-github-build'
+2025-06-27T04:17:18.6258648Z [command]/usr/bin/git version
+2025-06-27T04:17:18.6350051Z git version 2.49.0
+2025-06-27T04:17:18.6377256Z ##[endgroup]
+2025-06-27T04:17:18.6393629Z Temporarily overriding HOME='/home/runner/work/_temp/2325ac1d-e750-421e-a6c2-425ede454591' before making global git config changes
+2025-06-27T04:17:18.6395998Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-27T04:17:18.6408175Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android-github-build/android-github-build
+2025-06-27T04:17:18.6446713Z Deleting the contents of '/home/runner/work/android-github-build/android-github-build'
+2025-06-27T04:17:18.6450080Z ##[group]Initializing the repository
+2025-06-27T04:17:18.6455331Z [command]/usr/bin/git init /home/runner/work/android-github-build/android-github-build
+2025-06-27T04:17:18.6554023Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-27T04:17:18.6555371Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-27T04:17:18.6556393Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-27T04:17:18.6557059Z hint:
+2025-06-27T04:17:18.6557515Z hint: 	git config --global init.defaultBranch <name>
+2025-06-27T04:17:18.6558294Z hint:
+2025-06-27T04:17:18.6558822Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-27T04:17:18.6559676Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-27T04:17:18.6560481Z hint:
+2025-06-27T04:17:18.6561104Z hint: 	git branch -m <name>
+2025-06-27T04:17:18.6564167Z Initialized empty Git repository in /home/runner/work/android-github-build/android-github-build/.git/
+2025-06-27T04:17:18.6576133Z [command]/usr/bin/git remote add origin https://github.com/HansPeterRadtke/android-github-build
+2025-06-27T04:17:18.6610517Z ##[endgroup]
+2025-06-27T04:17:18.6612000Z ##[group]Disabling automatic garbage collection
+2025-06-27T04:17:18.6615495Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-27T04:17:18.6644004Z ##[endgroup]
+2025-06-27T04:17:18.6645209Z ##[group]Setting up auth
+2025-06-27T04:17:18.6651488Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-27T04:17:18.6681520Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-27T04:17:18.7036705Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-27T04:17:18.7066217Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-27T04:17:18.7283910Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-27T04:17:18.7319679Z ##[endgroup]
+2025-06-27T04:17:18.7320691Z ##[group]Fetching the repository
+2025-06-27T04:17:18.7328351Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4bdd4337092a6adb6a2dfe9fe4d27e3fe408f113:refs/tags/v1.2.2
+2025-06-27T04:17:19.6176091Z From https://github.com/HansPeterRadtke/android-github-build
+2025-06-27T04:17:19.6178341Z  * [new ref]         4bdd4337092a6adb6a2dfe9fe4d27e3fe408f113 -> v1.2.2
+2025-06-27T04:17:19.6205718Z ##[endgroup]
+2025-06-27T04:17:19.6207181Z ##[group]Determining the checkout info
+2025-06-27T04:17:19.6208619Z ##[endgroup]
+2025-06-27T04:17:19.6212531Z [command]/usr/bin/git sparse-checkout disable
+2025-06-27T04:17:19.6254497Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-27T04:17:19.6281706Z ##[group]Checking out the ref
+2025-06-27T04:17:19.6284818Z [command]/usr/bin/git checkout --progress --force refs/tags/v1.2.2
+2025-06-27T04:17:19.7239300Z Note: switching to 'refs/tags/v1.2.2'.
+2025-06-27T04:17:19.7240530Z 
+2025-06-27T04:17:19.7241816Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-06-27T04:17:19.7244135Z changes and commit them, and you can discard any commits you make in this
+2025-06-27T04:17:19.7245920Z state without impacting any branches by switching back to a branch.
+2025-06-27T04:17:19.7247008Z 
+2025-06-27T04:17:19.7248034Z If you want to create a new branch to retain commits you create, you may
+2025-06-27T04:17:19.7250561Z do so (now or later) by using -c with the switch command. Example:
+2025-06-27T04:17:19.7251950Z 
+2025-06-27T04:17:19.7252302Z   git switch -c <new-branch-name>
+2025-06-27T04:17:19.7253356Z 
+2025-06-27T04:17:19.7253756Z Or undo this operation with:
+2025-06-27T04:17:19.7254430Z 
+2025-06-27T04:17:19.7254789Z   git switch -
+2025-06-27T04:17:19.7255291Z 
+2025-06-27T04:17:19.7256148Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-06-27T04:17:19.7257466Z 
+2025-06-27T04:17:19.7258307Z HEAD is now at 4bdd433 Fix: resolve native lib conflict using packagingOptions
+2025-06-27T04:17:19.7262249Z ##[endgroup]
+2025-06-27T04:17:19.7288366Z [command]/usr/bin/git log -1 --format=%H
+2025-06-27T04:17:19.7310424Z 4bdd4337092a6adb6a2dfe9fe4d27e3fe408f113
