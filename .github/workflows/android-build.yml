@@ -22,7 +22,4 @@ jobs:
         chmod +x ./gradlew
     - name: Build APK
       run: ./gradlew assembleDebug
-    - name: Create GitHub Release
-      uses: softprops/action-gh-release@v2
-      with:
-        files: app/build/outputs/apk/debug/app-debug.apk
+    - name: Create GitHub Release\n      uses: softprops/action-gh-release@v2\n      with:\n        upload_url: ${{ github.event.release.upload_url }}\n        asset_path: app/build/outputs/apk/debug/app-debug.apk\n        asset_name: app-debug.apk\n        asset_content_type: application/vnd.android.package-archive
