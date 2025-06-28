@@ -1,0 +1,18 @@
+﻿2025-06-27T10:03:04.4672903Z ##[group]Run bash app/scripts/download_models.sh
+2025-06-27T10:03:04.4674419Z [36;1mbash app/scripts/download_models.sh[0m
+2025-06-27T10:03:04.4768463Z shell: /usr/bin/bash -e {0}
+2025-06-27T10:03:04.4769502Z env:
+2025-06-27T10:03:04.4770893Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-27T10:03:04.4773051Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.15-6/x64
+2025-06-27T10:03:04.4774733Z ##[endgroup]
+2025-06-27T10:03:04.4981802Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-06-27T10:03:04.4984417Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-06-27T10:03:04.4985466Z 
+2025-06-27T10:03:04.5144503Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-06-27T10:03:04.6189579Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-06-27T10:03:04.6191745Z 100    29  100    29    0     0    239      0 --:--:-- --:--:-- --:--:--   239
+2025-06-27T10:03:04.6264826Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-06-27T10:03:04.6267457Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-06-27T10:03:04.6268701Z 
+2025-06-27T10:03:04.6883660Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-06-27T10:03:04.6885969Z 100    29  100    29    0     0    468      0 --:--:-- --:--:-- --:--:--   475
