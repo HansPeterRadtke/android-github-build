@@ -32,6 +32,11 @@ android {
     packagingOptions {
         pickFirst 'lib/**/libonnxruntime.so'
     }
+tasks.register("downloadModels", Exec) {
+    workingDir "scripts"
+    commandLine "bash", "download_models.sh"
+}
+
     tasks.named("preBuild") { dependsOn("downloadModels") }
 }
 
