@@ -32,7 +32,7 @@ android {
     packagingOptions {
         pickFirst 'lib/**/libonnxruntime.so'
     }
-    preBuild.dependsOn(':app:scripts:downloadModels')
+    preBuild.dependsOn downloadModels
 }
 
 repositories {

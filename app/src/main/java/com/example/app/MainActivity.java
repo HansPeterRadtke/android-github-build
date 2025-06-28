@@ -99,11 +99,13 @@ public class MainActivity extends Activity {
       toTextButton.setOnClickListener(v -> {
         try {
           if (recordedAudio != null) {
-            short[] pcm = new short[recordedAudio.length / 2];
-            for (int i = 0; i < pcm.length; i++) {
-              pcm[i] = (short) ((recordedAudio[2*i+1] << 8) | (recordedAudio[2*i] & 0xFF));
+            short[] pcmShort = new short[recordedAudio.length / 2];
+            float[] pcmFloat = new float[pcmShort.length];
+            for (int i = 0; i < pcmShort.length; i++) {
+              pcmShort[i] = (short) ((recordedAudio[2*i+1] << 8) | (recordedAudio[2*i] & 0xFF));
+              pcmFloat[i] = pcmShort[i] / 32768.0f;
             }
-            String text = sttEngine.transcribe(pcm);
+            String text = sttEngine.transcribe(pcmFloat);
             textOutput.setText(text);
           } else {
             Toast.makeText(this, "No audio recorded", Toast.LENGTH_SHORT).show();

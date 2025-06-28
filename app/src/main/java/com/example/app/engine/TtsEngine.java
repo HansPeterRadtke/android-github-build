@@ -4,13 +4,14 @@ import android.content.Context;
 import android.util.Log;
 import com.microsoft.onnxruntime.*;
 import java.io.*;
-import java.util.Collections;
+import java.util.*;
 
 public class TtsEngine {
   private static final String TAG = "TtsEngine";
   private final Context context;
   private OrtEnvironment env;
   private OrtSession session;
+  private Map<String, Integer> tokenMap;
 
   public TtsEngine(Context context) {
     this.context = context;
@@ -26,23 +27,52 @@ public class TtsEngine {
         while ((read = modelIn.read(buffer)) != -1) out.write(buffer, 0, read);
       }
       session = env.createSession(modelFile.getAbsolutePath(), opts);
+      tokenMap = loadTokens();
     } catch (Exception e) {
       Log.e(TAG, "Failed to load TTS model", e);
     }
   }
 
+  private Map<String, Integer> loadTokens() throws IOException {
+    Map<String, Integer> map = new HashMap<>();
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(context.getAssets().open("models/tts/tokens.txt")))) {
+      String line;
+      int index = 0;
+      while ((line = reader.readLine()) != null) {
+        map.put(line.trim(), index++);
+      }
+    }
+    return map;
+  }
+
+  private int[] tokenize(String text) {
+    text = text.toLowerCase().replaceAll("[^a-zA-Z ]", "");
+    List<Integer> tokens = new ArrayList<>();
+    for (char c : text.toCharArray()) {
+      Integer token = tokenMap.get(String.valueOf(c));
+      if (token != null) tokens.add(token);
+    }
+    return tokens.stream().mapToInt(i -> i).toArray();
+  }
+
   public short[] synthesize(String text) {
     try {
-      // Placeholder for actual text processing & model feeding logic
-      float[] input = new float[512];
-      OnnxTensor inputTensor = OnnxTensor.createTensor(env, input);
-      OrtSession.Result output = session.run(Collections.singletonMap("text_input", inputTensor));
-      float[] audio = (float[]) output.get(0).getValue();
+      if (session == null) {
+        Log.e(TAG, "ONNX session not initialized");
+        return new short[0];
+      }
+      int[] tokenIds = tokenize(text);
+      long[] shape = new long[]{1, tokenIds.length};
+      float[] input = new float[tokenIds.length];
+      for (int i = 0; i < tokenIds.length; i++) input[i] = tokenIds[i];
+      OnnxTensor tensor = OnnxTensor.createTensor(env, input, shape);
+      OrtSession.Result result = session.run(Collections.singletonMap("text_input", tensor));
+      float[] audio = (float[]) result.get(0).getValue();
       short[] pcm = new short[audio.length];
-      for (int i = 0; i < audio.length; i++) pcm[i] = (short) (audio[i] * 32767);
+      for (int i = 0; i < audio.length; i++) pcm[i] = (short) (audio[i] * Short.MAX_VALUE);
       return pcm;
     } catch (Exception e) {
-      Log.e(TAG, "Synthesis failed", e);
+      Log.e(TAG, "TTS synthesis failed", e);
       return new short[0];
     }
   }
