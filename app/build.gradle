@@ -1,3 +1,4 @@
+println "[DEBUG] build.gradle running from: ${projectDir}"
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android' version '1.9.22'
@@ -40,7 +41,7 @@ repositories {
 }
 
 tasks.register("downloadModels", Exec) {
-    commandLine "bash", "app/scripts/download_models.sh"
+    commandLine "bash", "scripts/download_models.sh"
 }
 
 dependencies {
