@@ -31,14 +31,14 @@ jobs:
       - name: Verify gradlew exists
         shell: bash
         run: |
-          if [[ ! -x ./gradlew ]]; then
+          if ! command -v gradle >/dev/null; then
             echo "gradlew missing or not executable"
             exit 1
           fi
 
       - name: Assemble debug APK
         shell: bash
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Verify APK
         id: verify_apk
