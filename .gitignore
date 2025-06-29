@@ -9,4 +9,3 @@ app/debug.keystore
 repo.json
 tags.json
 releases.json
-app/src/main/assets/models/tts/vits_vocab.txt
