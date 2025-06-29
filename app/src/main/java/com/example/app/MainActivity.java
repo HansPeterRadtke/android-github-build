@@ -75,13 +75,6 @@ public class MainActivity extends AppCompatActivity {
           ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
         } else {
           startRecording();
-  private void stopRecording() {
-    isRecording = false;
-    if (recorder != null) {
-      recorder.stop();
-      recorder.release();
-      recorder = null;
-    }
   }
 
         }
@@ -127,13 +120,6 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void startRecording() {
-  private void stopRecording() {
-    isRecording = false;
-    if (recorder != null) {
-      recorder.stop();
-      recorder.release();
-      recorder = null;
-    }
   }
 
     try {
@@ -150,13 +136,6 @@ public class MainActivity extends AppCompatActivity {
 
       ByteArrayOutputStream audioStream = new ByteArrayOutputStream();
       audioRecord.startRecording();
-  private void stopRecording() {
-    isRecording = false;
-    if (recorder != null) {
-      recorder.stop();
-      recorder.release();
-      recorder = null;
-    }
   }
 
 
@@ -184,17 +163,19 @@ public class MainActivity extends AppCompatActivity {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     if (requestCode == REQUEST_RECORD_AUDIO && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
       startRecording();
-  private void stopRecording() {
-    isRecording = false;
-    if (recorder != null) {
-      recorder.stop();
-      recorder.release();
-      recorder = null;
-    }
   }
 
     } else {
       Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
     }
   }
+  private void stopRecording() {
+    isRecording = false;
+    if (audioRecord != null) {
+      audioRecord.stop();
+      audioRecord.release();
+      audioRecord = null;
+    }
+  }
+
 }

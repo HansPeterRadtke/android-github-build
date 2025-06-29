@@ -20,6 +20,7 @@ public class TtsEngine {
       env = OrtEnvironment.getEnvironment();
       OrtSession.SessionOptions opts = new OrtSession.SessionOptions();
       InputStream modelIn = context.getAssets().open("models/tts/vits_ljspeech.onnx");
+      try (modelIn) {
       File modelFile = new File(context.getCacheDir(), "vits.onnx");
       try (FileOutputStream out = new FileOutputStream(modelFile)) {
         byte[] buffer = new byte[4096];

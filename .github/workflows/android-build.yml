@@ -15,7 +15,7 @@ jobs:
       - name: Verify gradlew exists
         shell: bash
         run: |
-          if [[ ! -x gradle ]]; then
+          if ! command -v gradle >/dev/null; then
             echo "gradlew missing or not executable"
             exit 1
           fi

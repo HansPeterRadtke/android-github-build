@@ -1,5 +1,4 @@
 # Sensitive and generated files
-app/debug.keystore
 .git-credentials
 *log*
 
@@ -9,3 +8,4 @@ app/debug.keystore
 repo.json
 tags.json
 releases.json
+app/debug.keystore
