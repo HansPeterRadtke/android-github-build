@@ -12,6 +12,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Ensure wrapper jar
+        shell: bash
+        run: |
+          if [[ ! -f gradle/wrapper/gradle-wrapper.jar ]]; then
+            cat <<'EOF' > /tmp/settings.gradle
+            rootProject.name = 'wrapper'
+            EOF
+            cat <<'EOF' > /tmp/build.gradle
+            wrapper {
+                gradleVersion = '8.4'
+            }
+            EOF
+            gradle -b /tmp/build.gradle wrapper --no-daemon --console=plain --project-dir /tmp
+            cp /tmp/gradle/wrapper/gradle-wrapper.jar gradle/wrapper/
+          fi
+
       - name: Verify gradlew exists
         shell: bash
         run: |
