@@ -1,2 +1,4 @@
 #!/usr/bin/env python3
-print("TODO: Implement GitHub Action entry point")
+import os
+print("GitHub Action stub initialized")
+print("ENV: ", os.environ.get('GITHUB_WORKFLOW', 'unknown'))

@@ -1,6 +1,4 @@
 sRecording = true;
-package com.example.app;
-sRecording = true;
 
 sRecording = true;
 import android.Manifest;
