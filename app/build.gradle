@@ -32,21 +32,12 @@ android {
     packagingOptions {
         pickFirst 'lib/**/libonnxruntime.so'
     }
-tasks.register("downloadModels", Exec) {
-    workingDir "scripts"
-    commandLine "bash", "download_models.sh"
-}
 
-    tasks.named("preBuild") { dependsOn("downloadModels") }
-}
 
 repositories {
     mavenCentral()
 }
 
-tasks.register("downloadModels", Exec) {
-    commandLine "bash", "scripts/download_models.sh"
-}
 
 dependencies {
     implementation("com.bihe0832.android:lib-sherpa-onnx:6.25.21") {
