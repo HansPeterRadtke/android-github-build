@@ -3,3 +3,4 @@ app/debug.keystore
 .git-credentials
 *log*
 
+.gradle/
