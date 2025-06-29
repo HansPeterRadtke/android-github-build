@@ -4,3 +4,8 @@ app/debug.keystore
 *log*
 
 .gradle/
+
+# Auto-generated JSON API dumps
+repo.json
+tags.json
+releases.json
