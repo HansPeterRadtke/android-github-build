@@ -119,8 +119,6 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-  private void startRecording() {
-  }
 
     try {
       int sampleRate = 16000;
@@ -179,3 +177,37 @@ public class MainActivity extends AppCompatActivity {
   }
 
 }
+  private void startRecording() {
+    try {
+      int sampleRate = 16000;
+      int bufferSize = AudioRecord.getMinBufferSize(sampleRate,
+        AudioFormat.CHANNEL_IN_MONO,
+        AudioFormat.ENCODING_PCM_16BIT);
+
+      audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC,
+        sampleRate,
+        AudioFormat.CHANNEL_IN_MONO,
+        AudioFormat.ENCODING_PCM_16BIT,
+        bufferSize);
+
+      ByteArrayOutputStream audioStream = new ByteArrayOutputStream();
+      isRecording = true;
+      audioRecord.startRecording();
+
+      recordingThread = new Thread(() -> {
+        byte[] buffer = new byte[bufferSize];
+        while (isRecording) {
+          int read = audioRecord.read(buffer, 0, buffer.length);
+          if (read > 0) {
+            audioStream.write(buffer, 0, read);
+          }
+        }
+        recordedAudio = audioStream.toByteArray();
+      });
+      recordingThread.start();
+
+      Toast.makeText(this, "Recording started", Toast.LENGTH_SHORT).show();
+    } catch (Exception e) {
+      Toast.makeText(this, "Recording error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+    }
+  }

@@ -1,2 +1,1 @@
-#!/usr/bin/env python3
-print("GitHub Android build entry stub")
+#!/usr/bin/env python3\nimport os\nos.system("gradle assembleDebug")

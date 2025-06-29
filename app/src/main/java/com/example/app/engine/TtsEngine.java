@@ -22,7 +22,6 @@ public class TtsEngine {
       InputStream modelIn = context.getAssets().open("models/tts/vits_ljspeech.onnx");
 
       try (modelIn) {
-      try (modelIn) {
       File modelFile = new File(context.getCacheDir(), "vits.onnx");
       try (FileOutputStream out = new FileOutputStream(modelFile)) {
         byte[] buffer = new byte[4096];
