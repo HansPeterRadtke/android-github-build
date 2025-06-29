@@ -1,11 +1,8 @@
-# Sensitive and generated files
 .git-credentials
 *log*
-
 .gradle/
-
-# Auto-generated JSON API dumps
 repo.json
 tags.json
 releases.json
+gradle/wrapper/gradle-wrapper.jar
 app/debug.keystore
