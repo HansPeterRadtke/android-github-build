@@ -9,3 +9,4 @@ app/debug.keystore
 repo.json
 tags.json
 releases.json
+gradle/wrapper/gradle-wrapper.jar
