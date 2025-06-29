@@ -35,12 +35,15 @@ public class TtsEngine {
 
   private Map<String, Integer> loadTokens() throws IOException {
     Map<String, Integer> map = new HashMap<>();
-    try (BufferedReader reader = new BufferedReader(new InputStreamReader(context.getAssets().open("models/tts/tokens.txt")))) {
+    InputStream stream = context.getAssets().open("models/tts/tokens.txt");
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
       String line;
       int index = 0;
       while ((line = reader.readLine()) != null) {
         map.put(line.trim(), index++);
       }
+    } finally {
+      if (stream != null) stream.close();
     }
     return map;
   }

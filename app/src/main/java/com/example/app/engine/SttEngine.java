@@ -37,16 +37,20 @@ public class SttEngine {
   private Map<Integer, String> loadDecoder() throws IOException, JSONException {
     Map<Integer, String> map = new HashMap<>();
     InputStream jsonStream = context.getAssets().open("models/stt/vocab.json");
-    StringBuilder sb = new StringBuilder();
-    BufferedReader reader = new BufferedReader(new InputStreamReader(jsonStream));
-    String line;
-    while ((line = reader.readLine()) != null) sb.append(line);
-    JSONObject json = new JSONObject(sb.toString());
-    Iterator<String> keys = json.keys();
-    while (keys.hasNext()) {
-      String token = keys.next();
-      int id = json.getInt(token);
-      map.put(id, token);
+    try {
+      StringBuilder sb = new StringBuilder();
+      BufferedReader reader = new BufferedReader(new InputStreamReader(jsonStream));
+      String line;
+      while ((line = reader.readLine()) != null) sb.append(line);
+      JSONObject json = new JSONObject(sb.toString());
+      Iterator<String> keys = json.keys();
+      while (keys.hasNext()) {
+        String token = keys.next();
+        int id = json.getInt(token);
+        map.put(id, token);
+      }
+    } finally {
+      if (jsonStream != null) jsonStream.close();
     }
     return map;
   }
