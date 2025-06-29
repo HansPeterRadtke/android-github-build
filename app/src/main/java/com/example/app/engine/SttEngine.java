@@ -28,6 +28,9 @@ public class SttEngine {
         while ((read = modelIn.read(buffer)) != -1) out.write(buffer, 0, read);
       }
       session = env.createSession(modelFile.getAbsolutePath(), opts);
+      } finally {
+        if (modelIn != null) modelIn.close();
+      }
       decoder = loadDecoder();
     } catch (Exception e) {
       Log.e(TAG, "Failed to load STT model", e);
