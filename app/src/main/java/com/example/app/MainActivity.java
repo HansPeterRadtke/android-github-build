@@ -1,21 +1,33 @@
 package com.example.app;
 
-import android.app.Activity;
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.media.AudioFormat;
+import android.media.AudioManager;
 import android.media.AudioRecord;
 import android.media.AudioTrack;
-import android.media.AudioManager;
 import android.media.MediaRecorder;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.example.app.engine.SttEngine;
 import com.example.app.engine.TtsEngine;
 
-public class MainActivity extends Activity {
+import java.io.ByteArrayOutputStream;
+
+public class MainActivity extends AppCompatActivity {
+
+  private static final int REQUEST_RECORD_AUDIO = 1001;
 
   private ImageView backgroundImage;
   private Button toggleButton;
@@ -60,39 +72,10 @@ public class MainActivity extends Activity {
       exitButton.setOnClickListener(v -> finish());
 
       recordButton.setOnClickListener(v -> {
-        try {
-          if (!isRecording) {
-            int sampleRate = 16000;
-            int bufferSize = AudioRecord.getMinBufferSize(sampleRate,
-              AudioFormat.CHANNEL_IN_MONO,
-              AudioFormat.ENCODING_PCM_16BIT);
-            audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC,
-              sampleRate,
-              AudioFormat.CHANNEL_IN_MONO,
-              AudioFormat.ENCODING_PCM_16BIT,
-              bufferSize);
-            recordedAudio = new byte[bufferSize * 10];
-            audioRecord.startRecording();
-            isRecording = true;
-            recordingThread = new Thread(() -> {
-              int offset = 0;
-              while (isRecording && offset < recordedAudio.length) {
-                int read = audioRecord.read(recordedAudio, offset, bufferSize);
-                if (read > 0) offset += read;
-              }
-            });
-            recordingThread.start();
-            Toast.makeText(this, "Recording started", Toast.LENGTH_SHORT).show();
-          } else {
-            isRecording = false;
-            audioRecord.stop();
-            audioRecord.release();
-            audioRecord = null;
-            recordingThread = null;
-            Toast.makeText(this, "Recording stopped", Toast.LENGTH_SHORT).show();
-          }
-        } catch (Exception e) {
-          Toast.makeText(this, "Recording error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+          ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
+        } else {
+          startRecording();
         }
       });
 
@@ -124,12 +107,60 @@ public class MainActivity extends Activity {
             pcm.length * 2, AudioTrack.MODE_STATIC);
           track.write(pcm, 0, pcm.length);
           track.play();
+          track.release();
         } catch (Exception e) {
           Toast.makeText(this, "TTS error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
       });
+
     } catch (Exception e) {
       Toast.makeText(this, "Init error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+    }
+  }
+
+  private void startRecording() {
+    try {
+      int sampleRate = 16000;
+      int bufferSize = AudioRecord.getMinBufferSize(sampleRate,
+        AudioFormat.CHANNEL_IN_MONO,
+        AudioFormat.ENCODING_PCM_16BIT);
+
+      audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC,
+        sampleRate,
+        AudioFormat.CHANNEL_IN_MONO,
+        AudioFormat.ENCODING_PCM_16BIT,
+        bufferSize);
+
+      ByteArrayOutputStream audioStream = new ByteArrayOutputStream();
+      audioRecord.startRecording();
+      isRecording = true;
+
+      recordingThread = new Thread(() -> {
+        byte[] buffer = new byte[bufferSize];
+        while (isRecording) {
+          int read = audioRecord.read(buffer, 0, buffer.length);
+          if (read > 0) {
+            audioStream.write(buffer, 0, read);
+          }
+        }
+        recordedAudio = audioStream.toByteArray();
+      });
+      recordingThread.start();
+
+      Toast.makeText(this, "Recording started", Toast.LENGTH_SHORT).show();
+
+    } catch (Exception e) {
+      Toast.makeText(this, "Recording error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+    }
+  }
+
+  @Override
+  public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    if (requestCode == REQUEST_RECORD_AUDIO && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+      startRecording();
+    } else {
+      Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
     }
   }
 }

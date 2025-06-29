@@ -1,1 +1,5 @@
+# Sensitive and generated files
+app/debug.keystore
 .git-credentials
+*log*
+

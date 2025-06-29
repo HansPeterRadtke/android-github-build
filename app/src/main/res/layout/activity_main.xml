@@ -32,7 +32,7 @@
       android:id="@+id/textOutput"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:hint="Speech-to-text result" />
+      android:hint="@string/speech_hint" />
 
     <LinearLayout
       android:layout_width="match_parent"
@@ -45,21 +45,21 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="Record" />
+        android:text="@string/record" />
 
       <Button
         android:id="@+id/toTextButton"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="To Text" />
+        android:text="@string/to_text" />
 
       <Button
         android:id="@+id/readTextButton"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="Read Text" />
+        android:text="@string/read_text" />
     </LinearLayout>
   </LinearLayout>
 
