@@ -2,78 +2,36 @@ name: Android Build
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          python-version: '3.10'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y zip unzip openjdk-11-jdk python3-pip
+          pip install --upgrade pip
+          pip install buildozer cython
+
+      - name: Build APK
+        run: |
+          cd android_01
+          buildozer android debug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v3
         with:
-          packages: |
-            build-tools;34.0.0
-            platforms;android-34
-            platform-tools
-
-      - name: Ensure wrapper jar
-        shell: bash
-        run: |
-          if [[ ! -f gradle/wrapper/gradle-wrapper.jar ]]; then
-            cat <<'EOF' > /tmp/settings.gradle
-            rootProject.name = 'wrapper'
-            EOF
-            cat <<'EOF' > /tmp/build.gradle
-            wrapper {
-                gradleVersion = '8.4'
-            }
-            EOF
-            gradle -b /tmp/build.gradle wrapper --no-daemon --console=plain --project-dir /tmp
-            cp /tmp/gradle/wrapper/gradle-wrapper.jar gradle/wrapper/
-          fi
-
-      - name: Verify gradlew exists
-        shell: bash
-        run: |
-          if [[ ! -x ./gradlew ]]; then
-            echo "gradlew missing or not executable"
-            exit 1
-          fi
-
-      - name: Inject Android SDK licenses
-        shell: bash
-        run: .github/scripts/inject_licenses.sh
-
-      - name: Assemble debug APK
-        shell: bash
-        run: ./gradlew assembleDebug
-
-      - name: Verify APK
-        id: verify_apk
-        shell: bash
-        run: |
-          APK=app/build/outputs/apk/debug/app-debug.apk
-          if [[ -f "$APK" ]]; then
-            echo "apk_found=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "APK not found" >&2
-            exit 1
-          fi
-
-      - name: Create Release
-        if: steps.verify_apk.outputs.apk_found == 'true'
-        uses: softprops/action-gh-release@v2
-        with:
-          files: app/build/outputs/apk/debug/app-debug.apk
+          name: android-apk
+          path: android_01/bin/*.apk
