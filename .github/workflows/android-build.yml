@@ -29,6 +29,9 @@ jobs:
     - name: Install SDK packages
       run: sdkmanager "build-tools;34.0.0" "platforms;android-34" "platform-tools"
 
+    - name: Restore gradle-wrapper.jar
+      run: curl -sL https://services.gradle.org/distributions/gradle-8.1.1-bin.zip | bsdtar -xvf- -C gradle --strip-components=2 gradle-8.1.1/lib/gradle-wrapper.jar
+
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
 
