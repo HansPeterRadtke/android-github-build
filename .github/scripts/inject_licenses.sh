@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-LICENSE_DIR="$HOME/.buildozer/android/platform/android-sdk/licenses"
+LICENSE_DIR="$ANDROID_HOME/licenses"
 echo "Creating license directory: $LICENSE_DIR"
 mkdir -p "$LICENSE_DIR"
 echo "Writing android-sdk-license"
