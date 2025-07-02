@@ -43,9 +43,9 @@ android {
 dependencies {
 
 
-    }
+    
     implementation("androidx.appcompat:appcompat:1.6.1")
 
-    implementation "com.microsoft.onnxruntime:onnxruntime-android:1.15.1"
 }
 }
+    implementation "com.microsoft.onnxruntime:onnxruntime-android:1.15.1"\n}
