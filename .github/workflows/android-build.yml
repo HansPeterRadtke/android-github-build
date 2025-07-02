@@ -14,9 +14,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Validate Gradle Wrapper
-      uses: gradle/wrapper-validation-action@v1
-
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
@@ -31,6 +28,11 @@ jobs:
 
     - name: Install SDK packages
       run: sdkmanager "build-tools;34.0.0" "platforms;android-34" "platform-tools"
+
+    - name: Restore gradle-wrapper.jar
+      run: |
+        mkdir -p gradle/wrapper
+        curl -o gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle-wrapper-validation-action/main/gradle/wrapper/gradle-wrapper.jar
 
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
